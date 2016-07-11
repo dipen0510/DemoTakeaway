@@ -1210,7 +1210,7 @@
                     float milesDiff = (float)([[distanceDict valueForKey:@"value"] longValue] / 1609.34) - (float)[[[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"DeliveryPolicy"] valueForKey:@"FreeRadius"] intValue];
                     if (milesDiff > 0) {
                         
-                        milesDiff = roundf(milesDiff);
+                        milesDiff = ceilf(milesDiff);
                         
                         float extraCharge = milesDiff * (float)[[[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"DeliveryPolicy"] valueForKey:@"ChargePerMile"] intValue];
                         [[SharedContent sharedInstance] setExtraDistanceDeliveryCharge:extraCharge];
