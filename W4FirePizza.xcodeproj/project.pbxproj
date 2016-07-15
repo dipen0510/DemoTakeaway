@@ -81,7 +81,6 @@
 		18E151F81B85E3D900319AC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E151F71B85E3D800319AC2 /* CoreGraphics.framework */; };
 		18E151FA1B85E3E400319AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E151F91B85E3E400319AC2 /* UIKit.framework */; };
 		18F4C4FA1C8EF60F00886692 /* ic_minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F4C4F91C8EF60F00886692 /* ic_minus.png */; };
-		55F876461C89A96900F30C3C /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F876451C89A96900F30C3C /* splash.png */; };
 		D45636121B8D8FC6003DCA53 /* DataSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */; };
 		D45636131B8D8FC6003DCA53 /* SharedContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D45636111B8D8FC6003DCA53 /* SharedContent.m */; };
 		D456363F1B8D905A003DCA53 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D456361B1B8D905A003DCA53 /* AFHTTPRequestOperation.m */; };
@@ -114,6 +113,7 @@
 		D4BB2B851B9067980075F161 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B841B9067980075F161 /* MobileCoreServices.framework */; };
 		D4BB2B871B9067A20075F161 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B861B9067A20075F161 /* SystemConfiguration.framework */; };
 		D4D518851B95CF46005F9A92 /* ConfirmOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D518841B95CF46005F9A92 /* ConfirmOrderViewController.m */; };
+		D4E2E9C31D38B69A00EFDD78 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E2E9C21D38B69A00EFDD78 /* splash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,7 +134,7 @@
 		182382D91CD5D90B00A11A9C /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
 		182382DB1CD5D9B900A11A9C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		182382DD1CD5D9C600A11A9C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		182EC3D11B83B8B500A061A3 /* W4FirePizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = W4FirePizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		182EC3D11B83B8B500A061A3 /* Rajas Pontefract.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rajas Pontefract.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		182EC3D51B83B8B500A061A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182EC3D61B83B8B500A061A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		182EC3D81B83B8B500A061A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -240,7 +240,6 @@
 		18E151F71B85E3D800319AC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		18E151F91B85E3E400319AC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18F4C4F91C8EF60F00886692 /* ic_minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_minus.png; sourceTree = "<group>"; };
-		55F876451C89A96900F30C3C /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		D456360D1B8D8FC6003DCA53 /* DataSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSyncManager.h; sourceTree = "<group>"; };
 		D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSyncManager.m; sourceTree = "<group>"; };
 		D456360F1B8D8FC6003DCA53 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -312,6 +311,7 @@
 		D4BB2B861B9067A20075F161 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D4D518831B95CF46005F9A92 /* ConfirmOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmOrderViewController.h; sourceTree = "<group>"; };
 		D4D518841B95CF46005F9A92 /* ConfirmOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmOrderViewController.m; sourceTree = "<group>"; };
+		D4E2E9C21D38B69A00EFDD78 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,7 +361,7 @@
 		182EC3D21B83B8B500A061A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				182EC3D11B83B8B500A061A3 /* W4FirePizza.app */,
+				182EC3D11B83B8B500A061A3 /* Rajas Pontefract.app */,
 				182EC3EA1B83B8B500A061A3 /* W4FirePizza.xctest */,
 			);
 			name = Products;
@@ -439,10 +439,10 @@
 		182EC3FB1B83BA7D00A061A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D4E2E9C21D38B69A00EFDD78 /* splash.png */,
 				18C250E11CA5641500E81C70 /* minus.png */,
 				18C250E21CA5641500E81C70 /* plus.png */,
 				18F4C4F91C8EF60F00886692 /* ic_minus.png */,
-				55F876451C89A96900F30C3C /* splash.png */,
 				1887B1731B94E47F008E8A5A /* ic_add_48pt_3x.png */,
 				1887B1741B94E47F008E8A5A /* ic_add_48pt.png */,
 				1887B1751B94E47F008E8A5A /* ic_keyboard_arrow_down_48pt_3x.png */,
@@ -733,7 +733,7 @@
 			);
 			name = W4FirePizza;
 			productName = Voujon;
-			productReference = 182EC3D11B83B8B500A061A3 /* W4FirePizza.app */;
+			productReference = 182EC3D11B83B8B500A061A3 /* Rajas Pontefract.app */;
 			productType = "com.apple.product-type.application";
 		};
 		182EC3E91B83B8B500A061A3 /* W4FirePizzaTests */ = {
@@ -810,12 +810,12 @@
 				182EC3E01B83B8B500A061A3 /* Main.storyboard in Resources */,
 				182EC4031B83E77400A061A3 /* info.png in Resources */,
 				185417781BDB62DA0017B70C /* EditOrderCustomTableViewCell.xib in Resources */,
+				D4E2E9C31D38B69A00EFDD78 /* splash.png in Resources */,
 				182EC4191B83F33700A061A3 /* menu-icon.png in Resources */,
 				D4BB2B671B901EC40075F161 /* right_arrow@2x.png in Resources */,
 				182EC4071B83EB6D00A061A3 /* home.png in Resources */,
 				186B1EE71B939D8600783218 /* Checked-checkbox.png in Resources */,
 				182EC3E51B83B8B500A061A3 /* LaunchScreen.xib in Resources */,
-				55F876461C89A96900F30C3C /* splash.png in Resources */,
 				184D3DB41B84BBDA00545081 /* ic_policy@2x.png in Resources */,
 				18C250E31CA5641500E81C70 /* minus.png in Resources */,
 				182EC41B1B83F4AA00A061A3 /* btn_done@2x.png in Resources */,
@@ -1061,7 +1061,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
-				PRODUCT_NAME = W4FirePizza;
+				PRODUCT_NAME = "Rajas Pontefract";
 				PROVISIONING_PROFILE = "a26545b6-ed90-4567-8bef-429ae1f9e372";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1092,7 +1092,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
-				PRODUCT_NAME = W4FirePizza;
+				PRODUCT_NAME = "Rajas Pontefract";
 				PROVISIONING_PROFILE = "a26545b6-ed90-4567-8bef-429ae1f9e372";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
