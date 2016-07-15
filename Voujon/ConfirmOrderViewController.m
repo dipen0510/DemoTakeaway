@@ -613,11 +613,11 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     if([orderType isEqualToString:@"1"]) {
         orderType = @"Cash";
     }
-    /*else if([orderType isEqualToString:@"3"]) {
-        orderType = @"Stripe";
-    }*/
+    else if([orderType isEqualToString:@"3"]) {
+        orderType = @"Card";
+    }
     else {
-        orderType = @"Online";//@"Paypal";
+        orderType = @"Paypal";
     }
     
     
@@ -907,11 +907,11 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     
     
     [xmlWriter writeStartElement:@"ChargableMiles"];
-    [xmlWriter writeCharacters:[NSString stringWithFormat:@"%0.2f",[[SharedContent sharedInstance] extraDistanceInMiles]]];
+    [xmlWriter writeCharacters:[NSString stringWithFormat:@"%d",(int)[[SharedContent sharedInstance] extraDistanceInMiles]]];
     [xmlWriter writeEndElement];
     
     [xmlWriter writeStartElement:@"DeliveryCharge"];
-    [xmlWriter writeCharacters:[NSString stringWithFormat:@"%0.2f",[[SharedContent sharedInstance] extraDistanceDeliveryCharge]]];
+    [xmlWriter writeCharacters:[NSString stringWithFormat:@"%d",(int)[[SharedContent sharedInstance] extraDistanceDeliveryCharge]]];
     [xmlWriter writeEndElement];
     
     //Ashwani :: Epaycharge set by default depends on payment type
