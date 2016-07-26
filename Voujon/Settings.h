@@ -10,11 +10,10 @@
 #define Voujon_Settings_h
 
 //#define WebServiceURL @"http://voujonservicei.rh-it-solutions.co.uk/VoujonService"
-//#define WebServiceURL @"http://52.11.201.26/voujon/VoujonService"
 
-#define WebServiceURL @"http://rhitsolutions.co.uk/MobileWebServices"
+#define WebServiceURL @"http://mobileservice.rh-it-solutions.co.uk/MobileWebServices"   //---OLD---
+//#define WebServiceURL @"http://rhitsolutions.co.uk/MobileWebServices"     ----NEW----
 
-//#define WebServiceURL @"http://52.11.201.26/MWS/MobileWEbServices"
 
 
 #define kGetAllProductsNew @"GetAllProductsNew"

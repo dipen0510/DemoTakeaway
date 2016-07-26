@@ -602,12 +602,12 @@
                   moduleName = "My Snootys Bradford"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/Office/Projects/Demo%20Takeaway/Source/Base/W4Fire_pizza_Apr26_FINAL/Voujon/StripeDetailsViewController.m"
-                  timestampString = "491002391.472872"
+                  timestampString = "491248785.803788"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "100">
+                  offsetFromSymbolStart = "111">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -617,12 +617,12 @@
                   moduleName = "My Snootys Bradford"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/Office/Projects/Demo%20Takeaway/Source/Base/W4Fire_pizza_Apr26_FINAL/Voujon/StripeDetailsViewController.m"
-                  timestampString = "491002391.473022"
+                  timestampString = "491248785.8041"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "18">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1126,7 +1126,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Voujon/DataSyncManager.m"
@@ -1142,7 +1142,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Voujon/DataSyncManager.m"
@@ -1152,6 +1152,22 @@
             startingLineNumber = "77"
             endingLineNumber = "77"
             landmarkName = "-startPOSTWebServicesWithData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Voujon/EditOrderViewController.m"
+            timestampString = "491248702.520176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "-updatePriceAfterSelection"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
