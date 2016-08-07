@@ -433,8 +433,15 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     NSDate *date = [NSDate date];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSSSSS"];
     
-    orderDateTime = [dateFormatter stringFromDate:date];
-    scheduleDateTime = [self getScheduledDateTimeForPoller];
+    if ([[SharedContent sharedInstance] isRestoOpen]) {
+        orderDateTime = [dateFormatter stringFromDate:date];
+        scheduleDateTime = orderDateTime;
+    }
+    else {
+        orderDateTime = [dateFormatter stringFromDate:date];
+        scheduleDateTime = [self getScheduledDateTimeForPoller];
+    }
+    
     
     NSString * orderXML = [self createOrderXML];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];

@@ -108,9 +108,11 @@ int toppingTag = -1;
     }
     
     if (((currentTime > fromTime) && (currentTime < toTime))) {
+        [[SharedContent sharedInstance] setIsRestoOpen:YES];
         return true;
     }
     
+    [[SharedContent sharedInstance] setIsRestoOpen:NO];
     return false;
     
 }
