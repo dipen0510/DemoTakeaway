@@ -221,9 +221,10 @@
     self.deliveryPostcodeTxtField.text = @"";
     
     if (orderType == 1) {
-        
-        [self.requestTimeLbl setHidden:false];
-        [self.requestTimeTxtField setHidden:false];
+        if (![[SharedContent sharedInstance] isRestoOpen]) {
+            [self.requestTimeLbl setHidden:false];
+            [self.requestTimeTxtField setHidden:false];
+        }
         [self.deliveryPostCodeLbl setHidden:false];
         [self.deliveryPostcodeTxtField setHidden:false];
         [self.adress1Lbl setHidden:false];
@@ -240,15 +241,20 @@
         
         self.contentScrollView.contentSize = CGSizeMake(self.view.frame.size.width, 900);
         
-        [self setupPickerForDeliveryType];
+        if (![[SharedContent sharedInstance] isRestoOpen]) {
+            [self setupPickerForDeliveryType];
+        }
+        
         
         
         
     }
     else if (orderType == 2) {
         
-        [self.requestTimeLbl setHidden:false];
-        [self.requestTimeTxtField setHidden:false];
+        if (![[SharedContent sharedInstance] isRestoOpen]) {
+            [self.requestTimeLbl setHidden:false];
+            [self.requestTimeTxtField setHidden:false];
+        }
         [self.deliveryPostCodeLbl setHidden:true];
         [self.deliveryPostcodeTxtField setHidden:true];
         [self.adress1Lbl setHidden:true];
@@ -264,7 +270,10 @@
         
         self.contentScrollView.contentSize = CGSizeMake(self.view.frame.size.width, 545);
         
-        [self setupPickerForCollectionType];
+        if (![[SharedContent sharedInstance] isRestoOpen]) {
+            [self setupPickerForCollectionType];
+        }
+        
         
     }
     else {
@@ -1022,6 +1031,13 @@
     [dict setObject:self.townTxtField.text forKey:@"townCity"];
     
     //Ashwani :: Replace string with time string of format MM/dd/yyyy HH:mm:ss
+    
+    if (!scheduleDateTime) {
+        NSDateFormatter *df = [[NSDateFormatter alloc] init];
+        [df setDateFormat:@"MM/dd/yyyy HH:mm:ss"];
+        scheduleDateTime = [df stringFromDate:[NSDate date]];
+    }
+    
     [dict setObject:scheduleDateTime forKey:@"requestTime"];
     //[dict setObject:self.requestTimeTxtField.text forKey:@"requestTime"];
     
