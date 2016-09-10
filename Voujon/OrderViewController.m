@@ -1685,10 +1685,16 @@ int toppingTag = -1;
     NSLog(@"Cart Array : %@ and Count :%lu", [[SharedContent sharedInstance] cartArr], (unsigned long)tmpArr.count);
     
     NSMutableDictionary* tmpCartDict = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *dict = [[[menuDisplayArr objectAtIndex:indexPath.section] valueForKey:@"Products"] objectAtIndex:indexPath.row];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithDictionary:[[[menuDisplayArr objectAtIndex:indexPath.section] valueForKey:@"Products"] objectAtIndex:indexPath.row]];
     //Ashwani :: Check here for custom varients
-    if(dict == nil)
-        dict = [[[menuDisplayArr objectAtIndex:indexPath.section] valueForKey:@"CustomProducts"] objectAtIndex:indexPath.row];
+    if(dict == nil || dict.count == 0) {
+        dict = [[NSMutableDictionary alloc] initWithDictionary:[[[menuDisplayArr objectAtIndex:indexPath.section] valueForKey:@"CustomProducts"] objectAtIndex:indexPath.row]];
+        [dict setObject:[NSNumber numberWithBool:YES] forKey:@"isCustomProduct"];
+    }
+    else {
+        [dict setObject:[NSNumber numberWithBool:NO] forKey:@"isCustomProduct"];
+    }
+    
     if ([[[menuDisplayArr objectAtIndex:indexPath.section] valueForKey:@"CategoryName"] containsString:@"VOUJON"]) {
         
          [tmpCartDict setObject:[dict valueForKey:@"Code"] forKey:@"Code"];
@@ -1696,6 +1702,8 @@ int toppingTag = -1;
          [tmpCartDict setObject:[dict valueForKey:@"DisplaySequence"] forKey:@"DisplaySequence"];
          [tmpCartDict setObject:[dict valueForKey:@"Name"] forKey:@"Name"];
          [tmpCartDict setObject:[dict valueForKey:@"ProductId"] forKey:@"ProductId"];
+        
+        [tmpCartDict setObject:[dict valueForKey:@"isCustomProduct"] forKey:@"isCustomProduct"];
         
         //Ashwani May 26, 2016:: Set here original price of product here
         if([dict valueForKey:@"Price"] != nil)
@@ -1781,6 +1789,8 @@ int toppingTag = -1;
             [tmpCartDict setObject:[dict valueForKey:@"DisplaySequence"] forKey:@"DisplaySequence"];
             [tmpCartDict setObject:[dict valueForKey:@"Name"] forKey:@"Name"];
             [tmpCartDict setObject:[dict valueForKey:@"ProductId"] forKey:@"ProductId"];
+            
+            [tmpCartDict setObject:[dict valueForKey:@"isCustomProduct"] forKey:@"isCustomProduct"];
             
             //Ashwani May 26, 2016:: Set here original price of product here
             if([dict valueForKey:@"Price"] != nil)
@@ -1899,6 +1909,8 @@ int toppingTag = -1;
             [tmpCartDict setObject:[dict valueForKey:@"DisplaySequence"] forKey:@"DisplaySequence"];
             [tmpCartDict setObject:[dict valueForKey:@"Name"] forKey:@"Name"];
             [tmpCartDict setObject:[dict valueForKey:@"ProductId"] forKey:@"ProductId"];
+            
+            [tmpCartDict setObject:[dict valueForKey:@"isCustomProduct"] forKey:@"isCustomProduct"];
             
             //Ashwani May 26, 2016:: Set here original price of product here
             if([dict valueForKey:@"Price"] != nil)
@@ -2105,6 +2117,8 @@ int toppingTag = -1;
             [tmpCartDict setObject:[dict valueForKey:@"DisplaySequence"] forKey:@"DisplaySequence"];
             [tmpCartDict setObject:[dict valueForKey:@"Name"] forKey:@"Name"];
             [tmpCartDict setObject:[dict valueForKey:@"ProductId"] forKey:@"ProductId"];
+            
+            [tmpCartDict setObject:[dict valueForKey:@"isCustomProduct"] forKey:@"isCustomProduct"];
             
             //Ashwani May 26, 2016:: Set here original price of product here
             if([dict valueForKey:@"Price"] != nil)

@@ -833,7 +833,27 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
                 [xmlWriter writeEndElement];//End 23
                 //
                 [xmlWriter writeStartElement:@"UnitPrice1"];//30
-                [xmlWriter writeAttribute:@"xsi:nil" value:@"true"];
+                
+                //Dipen Sekhsaria
+                
+                if (![[[[[SharedContent sharedInstance] cartArr] objectAtIndex:i] valueForKey:@"isCustomProduct"] boolValue]) {
+                 
+                    if([dict valueForKey:@"Price"] != nil && (![@"" isEqualToString:[dict valueForKey:@"Price"]]) && ![[dict valueForKey:@"Price"] isEqual:[NSNull null]])
+                    {
+                        //[xmlWriter writeCharacters:[[[[SharedContent sharedInstance] cartArr] objectAtIndex:i] valueForKey:@"Price"]];
+                        [xmlWriter writeCharacters:[dict valueForKey:@"Price"]];
+                    }
+                    else
+                        [xmlWriter writeAttribute:@"xsi:nil" value:@"true"];
+                    
+                }
+                else {
+                    [xmlWriter writeAttribute:@"xsi:nil" value:@"true"];
+                }
+                
+                
+                
+                //[xmlWriter writeAttribute:@"xsi:nil" value:@"true"];
                 //[xmlWriter writeCharacters:@"1"];
                 [xmlWriter writeEndElement];//End 24
                 
