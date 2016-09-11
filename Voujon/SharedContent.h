@@ -35,5 +35,6 @@
 @property float extraDistanceDeliveryCharge;
 
 @property BOOL isRestoClosed;
+@property BOOL isRestoOpen;
 
 @end
