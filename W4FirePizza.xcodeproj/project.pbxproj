@@ -1062,7 +1062,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.romeosPizzaBarry;
 				PRODUCT_NAME = "Romeo's Pizza Barry";
-				PROVISIONING_PROFILE = "5a36f494-797a-4a6b-8e44-3e1270499710";
+				PROVISIONING_PROFILE = "3deca478-e5f5-40eb-a868-258a3f4507f1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1093,7 +1093,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.romeosPizzaBarry;
 				PRODUCT_NAME = "Romeo's Pizza Barry";
-				PROVISIONING_PROFILE = "5a36f494-797a-4a6b-8e44-3e1270499710";
+				PROVISIONING_PROFILE = "3deca478-e5f5-40eb-a868-258a3f4507f1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
