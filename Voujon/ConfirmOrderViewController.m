@@ -433,8 +433,15 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     NSDate *date = [NSDate date];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSSSSS"];
     
-    orderDateTime = [dateFormatter stringFromDate:date];
-    scheduleDateTime = [self getScheduledDateTimeForPoller];
+    if ([[SharedContent sharedInstance] isRestoOpen]) {
+        orderDateTime = [dateFormatter stringFromDate:date];
+        scheduleDateTime = orderDateTime;
+    }
+    else {
+        orderDateTime = [dateFormatter stringFromDate:date];
+        scheduleDateTime = [self getScheduledDateTimeForPoller];
+    }
+    
     
     NSString * orderXML = [self createOrderXML];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
@@ -826,7 +833,27 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
                 [xmlWriter writeEndElement];//End 23
                 //
                 [xmlWriter writeStartElement:@"UnitPrice1"];//30
-                [xmlWriter writeAttribute:@"xsi:nil" value:@"true"];
+                
+                //Dipen Sekhsaria
+                
+                if (![[[[[SharedContent sharedInstance] cartArr] objectAtIndex:i] valueForKey:@"isCustomProduct"] boolValue]) {
+                    
+                    if([dict valueForKey:@"Price"] != nil && (![@"" isEqualToString:[dict valueForKey:@"Price"]]) && ![[dict valueForKey:@"Price"] isEqual:[NSNull null]])
+                    {
+                        //[xmlWriter writeCharacters:[[[[SharedContent sharedInstance] cartArr] objectAtIndex:i] valueForKey:@"Price"]];
+                        [xmlWriter writeCharacters:[dict valueForKey:@"Price"]];
+                    }
+                    else
+                        [xmlWriter writeAttribute:@"xsi:nil" value:@"true"];
+                    
+                }
+                else {
+                    [xmlWriter writeAttribute:@"xsi:nil" value:@"true"];
+                }
+                
+                
+                
+                //[xmlWriter writeAttribute:@"xsi:nil" value:@"true"];
                 //[xmlWriter writeCharacters:@"1"];
                 [xmlWriter writeEndElement];//End 24
                 
@@ -896,13 +923,13 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             [xmlWriter writeCharacters:[dict valueForKey:@"DiscountRate"]];
         else
             [xmlWriter writeCharacters:@"0"];
-    else
-    [xmlWriter writeCharacters:@"0"];
+        else
+            [xmlWriter writeCharacters:@"0"];
     [xmlWriter writeEndElement];
     
-//    [xmlWriter writeStartElement:@"DiscountRate"];
-//    [xmlWriter writeCharacters:@"0"];
-//    [xmlWriter writeEndElement];
+    //    [xmlWriter writeStartElement:@"DiscountRate"];
+    //    [xmlWriter writeCharacters:@"0"];
+    //    [xmlWriter writeEndElement];
     
     
     
