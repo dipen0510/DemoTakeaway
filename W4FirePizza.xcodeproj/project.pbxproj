@@ -1062,7 +1062,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.periPeriOriginalAylesbury;
 				PRODUCT_NAME = "Peri Peri Original Aylesbury";
-				PROVISIONING_PROFILE = "f37ad6dd-4964-44d3-aa56-6dc469437960";
+				PROVISIONING_PROFILE = "ae636ced-306b-4dba-afa3-1b64ef19e121";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1093,7 +1093,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.periPeriOriginalAylesbury;
 				PRODUCT_NAME = "Peri Peri Original Aylesbury";
-				PROVISIONING_PROFILE = "f37ad6dd-4964-44d3-aa56-6dc469437960";
+				PROVISIONING_PROFILE = "ae636ced-306b-4dba-afa3-1b64ef19e121";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
