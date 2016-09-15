@@ -1062,7 +1062,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.mySnootysBradford;
 				PRODUCT_NAME = "My Snootys Bradford";
-				PROVISIONING_PROFILE = "109e347c-4d5a-4c9a-9d5b-2b722a06bcde";
+				PROVISIONING_PROFILE = "9dcd3fa5-3af8-43db-8931-a855e9d93719";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1093,7 +1093,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.mySnootysBradford;
 				PRODUCT_NAME = "My Snootys Bradford";
-				PROVISIONING_PROFILE = "109e347c-4d5a-4c9a-9d5b-2b722a06bcde";
+				PROVISIONING_PROFILE = "9dcd3fa5-3af8-43db-8931-a855e9d93719";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

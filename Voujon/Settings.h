@@ -11,8 +11,8 @@
 
 //#define WebServiceURL @"http://voujonservicei.rh-it-solutions.co.uk/VoujonService"
 
-#define WebServiceURL @"http://mobileservice.rh-it-solutions.co.uk/MobileWebServices"   //---OLD---
-//#define WebServiceURL @"http://rhitsolutions.co.uk/MobileWebServices"     ----NEW----
+//#define WebServiceURL @"http://mobileservice.rh-it-solutions.co.uk/MobileWebServices"   //---OLD---
+#define WebServiceURL @"http://rhitsolutions.co.uk/MobileWebServices"     //----NEW----
 
 
 
@@ -25,7 +25,7 @@
 
 //#define kBusinessID @"7868"//Romeo
 //#define kBusinessID @"7863"//Demo
-#define kBusinessID @"7861001"
+#define kBusinessID @"78620"
 //#define kBusinessID @"78613"
 
 #endif
