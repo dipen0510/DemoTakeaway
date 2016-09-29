@@ -83,7 +83,7 @@
 
 - (void)createBackendChargeWithToken:(STPToken *)token
                           completion:(void (^)(PKPaymentAuthorizationStatus))completion {
-    NSURL *url = [NSURL URLWithString:@"http://stripe.ibrarhussain.co.uk/payment.php"];
+    NSURL *url = [NSURL URLWithString:@"http://tucoskeighly.ibrarhussain.co.uk/payment.php"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
     NSString *body     = [self getJsonStringForStripeForToken:token.tokenId];
