@@ -12,7 +12,6 @@
 		182382DA1CD5D90B00A11A9C /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182382D91CD5D90B00A11A9C /* Pushwoosh.framework */; };
 		182382DC1CD5D9B900A11A9C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 182382DB1CD5D9B900A11A9C /* libz.tbd */; };
 		182382DE1CD5D9C600A11A9C /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 182382DD1CD5D9C600A11A9C /* libstdc++.tbd */; };
-		18254C6E1D92C94800C0C11D /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 18254C6D1D92C94700C0C11D /* splash.png */; };
 		182EC3D71B83B8B500A061A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182EC3D61B83B8B500A061A3 /* main.m */; };
 		182EC3DA1B83B8B500A061A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182EC3D91B83B8B500A061A3 /* AppDelegate.m */; };
 		182EC3DD1B83B8B500A061A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182EC3DC1B83B8B500A061A3 /* ViewController.m */; };
@@ -82,6 +81,7 @@
 		18E151F81B85E3D900319AC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E151F71B85E3D800319AC2 /* CoreGraphics.framework */; };
 		18E151FA1B85E3E400319AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E151F91B85E3E400319AC2 /* UIKit.framework */; };
 		18F4C4FA1C8EF60F00886692 /* ic_minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F4C4F91C8EF60F00886692 /* ic_minus.png */; };
+		D4104E831D9D2D79006348D3 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = D4104E821D9D2D79006348D3 /* splash.png */; };
 		D45636121B8D8FC6003DCA53 /* DataSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */; };
 		D45636131B8D8FC6003DCA53 /* SharedContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D45636111B8D8FC6003DCA53 /* SharedContent.m */; };
 		D456363F1B8D905A003DCA53 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D456361B1B8D905A003DCA53 /* AFHTTPRequestOperation.m */; };
@@ -134,7 +134,6 @@
 		182382D91CD5D90B00A11A9C /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
 		182382DB1CD5D9B900A11A9C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		182382DD1CD5D9C600A11A9C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		18254C6D1D92C94700C0C11D /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		182EC3D11B83B8B500A061A3 /* Nawaz Restaurant Leeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nawaz Restaurant Leeds.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		182EC3D51B83B8B500A061A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182EC3D61B83B8B500A061A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -241,6 +240,7 @@
 		18E151F71B85E3D800319AC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		18E151F91B85E3E400319AC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18F4C4F91C8EF60F00886692 /* ic_minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_minus.png; sourceTree = "<group>"; };
+		D4104E821D9D2D79006348D3 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		D456360D1B8D8FC6003DCA53 /* DataSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSyncManager.h; sourceTree = "<group>"; };
 		D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSyncManager.m; sourceTree = "<group>"; };
 		D456360F1B8D8FC6003DCA53 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -439,7 +439,7 @@
 		182EC3FB1B83BA7D00A061A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				18254C6D1D92C94700C0C11D /* splash.png */,
+				D4104E821D9D2D79006348D3 /* splash.png */,
 				18C250E11CA5641500E81C70 /* minus.png */,
 				18C250E21CA5641500E81C70 /* plus.png */,
 				18F4C4F91C8EF60F00886692 /* ic_minus.png */,
@@ -818,6 +818,7 @@
 				184D3DB41B84BBDA00545081 /* ic_policy@2x.png in Resources */,
 				18C250E31CA5641500E81C70 /* minus.png in Resources */,
 				182EC41B1B83F4AA00A061A3 /* btn_done@2x.png in Resources */,
+				D4104E831D9D2D79006348D3 /* splash.png in Resources */,
 				184D3DA51B84AE1800545081 /* ic_contactus.png in Resources */,
 				18F4C4FA1C8EF60F00886692 /* ic_minus.png in Resources */,
 				1887B17B1B94E47F008E8A5A /* ic_keyboard_arrow_down_48pt_3x.png in Resources */,
@@ -840,7 +841,6 @@
 				184D3D861B84935500545081 /* icon@2x.png in Resources */,
 				184D3DB21B84BBDA00545081 /* home@2x.png in Resources */,
 				1887B17A1B94E47F008E8A5A /* ic_add_48pt.png in Resources */,
-				18254C6E1D92C94800C0C11D /* splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1060,9 +1060,9 @@
 					"-lc++",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.nawazRestaurantLeeds;
 				PRODUCT_NAME = "Nawaz Restaurant Leeds";
-				PROVISIONING_PROFILE = "a26545b6-ed90-4567-8bef-429ae1f9e372";
+				PROVISIONING_PROFILE = "a0cda135-2992-4b18-ad1b-0577fcb4a1b1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1091,9 +1091,9 @@
 					"-lc++",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.nawazRestaurantLeeds;
 				PRODUCT_NAME = "Nawaz Restaurant Leeds";
-				PROVISIONING_PROFILE = "a26545b6-ed90-4567-8bef-429ae1f9e372";
+				PROVISIONING_PROFILE = "a0cda135-2992-4b18-ad1b-0577fcb4a1b1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
