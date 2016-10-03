@@ -81,7 +81,6 @@
 		18E151F81B85E3D900319AC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E151F71B85E3D800319AC2 /* CoreGraphics.framework */; };
 		18E151FA1B85E3E400319AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E151F91B85E3E400319AC2 /* UIKit.framework */; };
 		18F4C4FA1C8EF60F00886692 /* ic_minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F4C4F91C8EF60F00886692 /* ic_minus.png */; };
-		55F876461C89A96900F30C3C /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F876451C89A96900F30C3C /* splash.png */; };
 		D45636121B8D8FC6003DCA53 /* DataSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */; };
 		D45636131B8D8FC6003DCA53 /* SharedContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D45636111B8D8FC6003DCA53 /* SharedContent.m */; };
 		D456363F1B8D905A003DCA53 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D456361B1B8D905A003DCA53 /* AFHTTPRequestOperation.m */; };
@@ -104,6 +103,7 @@
 		D456365A1B8DDDFD003DCA53 /* ic_add_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45636571B8DDDFD003DCA53 /* ic_add_48pt_2x.png */; };
 		D45636601B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D456365D1B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png */; };
 		D45636661B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45636631B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png */; };
+		D4B2C90D1DA2AA9E007DFE5A /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = D4B2C90C1DA2AA9E007DFE5A /* splash.png */; };
 		D4BB2B671B901EC40075F161 /* right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BB2B661B901EC40075F161 /* right_arrow@2x.png */; };
 		D4BB2B791B9066BD0075F161 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B711B9066BD0075F161 /* libPayPalMobile.a */; };
 		D4BB2B7B1B9067780075F161 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B7A1B9067780075F161 /* Accelerate.framework */; };
@@ -134,7 +134,7 @@
 		182382D91CD5D90B00A11A9C /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
 		182382DB1CD5D9B900A11A9C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		182382DD1CD5D9C600A11A9C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		182EC3D11B83B8B500A061A3 /* W4FirePizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = W4FirePizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		182EC3D11B83B8B500A061A3 /* Indulge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Indulge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182EC3D51B83B8B500A061A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182EC3D61B83B8B500A061A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		182EC3D81B83B8B500A061A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -240,7 +240,6 @@
 		18E151F71B85E3D800319AC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		18E151F91B85E3E400319AC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18F4C4F91C8EF60F00886692 /* ic_minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_minus.png; sourceTree = "<group>"; };
-		55F876451C89A96900F30C3C /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		D456360D1B8D8FC6003DCA53 /* DataSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSyncManager.h; sourceTree = "<group>"; };
 		D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSyncManager.m; sourceTree = "<group>"; };
 		D456360F1B8D8FC6003DCA53 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -286,6 +285,7 @@
 		D45636571B8DDDFD003DCA53 /* ic_add_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_add_48pt_2x.png; sourceTree = "<group>"; };
 		D456365D1B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_keyboard_arrow_down_48pt_2x.png; sourceTree = "<group>"; };
 		D45636631B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_keyboard_arrow_up_48pt_2x.png; sourceTree = "<group>"; };
+		D4B2C90C1DA2AA9E007DFE5A /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		D4BB2B661B901EC40075F161 /* right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow@2x.png"; sourceTree = "<group>"; };
 		D4BB2B691B9066BD0075F161 /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
 		D4BB2B6A1B9066BD0075F161 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
@@ -361,7 +361,7 @@
 		182EC3D21B83B8B500A061A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				182EC3D11B83B8B500A061A3 /* W4FirePizza.app */,
+				182EC3D11B83B8B500A061A3 /* Indulge.app */,
 				182EC3EA1B83B8B500A061A3 /* W4FirePizza.xctest */,
 			);
 			name = Products;
@@ -439,10 +439,10 @@
 		182EC3FB1B83BA7D00A061A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D4B2C90C1DA2AA9E007DFE5A /* splash.png */,
 				18C250E11CA5641500E81C70 /* minus.png */,
 				18C250E21CA5641500E81C70 /* plus.png */,
 				18F4C4F91C8EF60F00886692 /* ic_minus.png */,
-				55F876451C89A96900F30C3C /* splash.png */,
 				1887B1731B94E47F008E8A5A /* ic_add_48pt_3x.png */,
 				1887B1741B94E47F008E8A5A /* ic_add_48pt.png */,
 				1887B1751B94E47F008E8A5A /* ic_keyboard_arrow_down_48pt_3x.png */,
@@ -733,7 +733,7 @@
 			);
 			name = W4FirePizza;
 			productName = Voujon;
-			productReference = 182EC3D11B83B8B500A061A3 /* W4FirePizza.app */;
+			productReference = 182EC3D11B83B8B500A061A3 /* Indulge.app */;
 			productType = "com.apple.product-type.application";
 		};
 		182EC3E91B83B8B500A061A3 /* W4FirePizzaTests */ = {
@@ -815,7 +815,6 @@
 				182EC4071B83EB6D00A061A3 /* home.png in Resources */,
 				186B1EE71B939D8600783218 /* Checked-checkbox.png in Resources */,
 				182EC3E51B83B8B500A061A3 /* LaunchScreen.xib in Resources */,
-				55F876461C89A96900F30C3C /* splash.png in Resources */,
 				184D3DB41B84BBDA00545081 /* ic_policy@2x.png in Resources */,
 				18C250E31CA5641500E81C70 /* minus.png in Resources */,
 				182EC41B1B83F4AA00A061A3 /* btn_done@2x.png in Resources */,
@@ -828,6 +827,7 @@
 				182EC4021B83E77400A061A3 /* find.png in Resources */,
 				182EC3E21B83B8B500A061A3 /* Images.xcassets in Resources */,
 				1887B1791B94E47F008E8A5A /* ic_add_48pt_3x.png in Resources */,
+				D4B2C90D1DA2AA9E007DFE5A /* splash.png in Resources */,
 				D45636661B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png in Resources */,
 				1887B17E1B94E47F008E8A5A /* ic_keyboard_arrow_up_48pt.png in Resources */,
 				D456365A1B8DDDFD003DCA53 /* ic_add_48pt_2x.png in Resources */,
@@ -993,7 +993,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "609ec1b0-7e53-4751-b5ac-7180ccd27567";
+				PROVISIONING_PROFILE = "e2918786-5789-4b8e-8ff9-e6b73162f0ce";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1031,7 +1031,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "609ec1b0-7e53-4751-b5ac-7180ccd27567";
+				PROVISIONING_PROFILE = "e2918786-5789-4b8e-8ff9-e6b73162f0ce";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1060,9 +1060,9 @@
 					"-lc++",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
-				PRODUCT_NAME = W4FirePizza;
-				PROVISIONING_PROFILE = "a26545b6-ed90-4567-8bef-429ae1f9e372";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.indulge;
+				PRODUCT_NAME = Indulge;
+				PROVISIONING_PROFILE = "9c368a36-ea89-414e-acc4-fee296036194";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1091,9 +1091,9 @@
 					"-lc++",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
-				PRODUCT_NAME = W4FirePizza;
-				PROVISIONING_PROFILE = "a26545b6-ed90-4567-8bef-429ae1f9e372";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.indulge;
+				PRODUCT_NAME = Indulge;
+				PROVISIONING_PROFILE = "9c368a36-ea89-414e-acc4-fee296036194";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1116,7 +1116,7 @@
 				INFOPLIST_FILE = VoujonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = W4FirePizza;
-				PROVISIONING_PROFILE = "24ac0bee-a16d-4353-ac3a-47d3b44abf4a";
+				PROVISIONING_PROFILE = "e2918786-5789-4b8e-8ff9-e6b73162f0ce";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/W4FirePizza.app/W4FirePizza";
 			};
 			name = Debug;
@@ -1134,7 +1134,7 @@
 				INFOPLIST_FILE = VoujonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = W4FirePizza;
-				PROVISIONING_PROFILE = "24ac0bee-a16d-4353-ac3a-47d3b44abf4a";
+				PROVISIONING_PROFILE = "e2918786-5789-4b8e-8ff9-e6b73162f0ce";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/W4FirePizza.app/W4FirePizza";
 			};
 			name = Release;
