@@ -1060,9 +1060,9 @@
 					"-lc++",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.Bistro56;
 				PRODUCT_NAME = Bistro56;
-				PROVISIONING_PROFILE = "a26545b6-ed90-4567-8bef-429ae1f9e372";
+				PROVISIONING_PROFILE = "2c091f79-4d87-44f7-b6c2-e85bee49941e";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1091,9 +1091,9 @@
 					"-lc++",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.Bistro56;
 				PRODUCT_NAME = Bistro56;
-				PROVISIONING_PROFILE = "a26545b6-ed90-4567-8bef-429ae1f9e372";
+				PROVISIONING_PROFILE = "2c091f79-4d87-44f7-b6c2-e85bee49941e";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
