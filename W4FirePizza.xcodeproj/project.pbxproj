@@ -1062,7 +1062,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
 				PRODUCT_NAME = W4FirePizza;
-				PROVISIONING_PROFILE = "a26545b6-ed90-4567-8bef-429ae1f9e372";
+				PROVISIONING_PROFILE = "beb109f1-5d12-456a-a1c2-efa7272d931c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1093,7 +1093,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
 				PRODUCT_NAME = W4FirePizza;
-				PROVISIONING_PROFILE = "a26545b6-ed90-4567-8bef-429ae1f9e372";
+				PROVISIONING_PROFILE = "beb109f1-5d12-456a-a1c2-efa7272d931c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

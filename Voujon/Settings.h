@@ -25,6 +25,8 @@
 #define kGetComponentItemsNew @"GetComponentItemsNew"
 #define kGetOptionsNew @"GetOptionsNew"
 
+#define kStripeCharge @"chargecard"
+
 //#define kBusinessID @"7868"//Romeo
 //#define kBusinessID @"7863"//Demo
 #define kBusinessID @"78610"

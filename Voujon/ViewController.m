@@ -80,7 +80,7 @@
         }
         if ([responseDict valueForKey:@"SecretKey"] && ![[responseDict valueForKey:@"SecretKey"] isEqual:[NSNull null]]) {
             [[SharedContent sharedInstance] setPaypalSecretKey:[responseDict valueForKey:@"SecretKey"]];
-            [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentProduction : [[SharedContent sharedInstance] PaypalSecretKey]}];
+//            [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentSandbox : [[SharedContent sharedInstance] PaypalSecretKey]}];
         }
         
         
