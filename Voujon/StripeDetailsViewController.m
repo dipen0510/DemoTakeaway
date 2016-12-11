@@ -130,7 +130,7 @@
 
 - (void)createBackendCharge
                            {
-    NSURL *url = [NSURL URLWithString:@"http://rhitapi.co.uk/api/stripe/chargecard"];
+    NSURL *url = [NSURL URLWithString:@"https://rhitapi.co.uk/api/stripe/chargecard"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
     NSString *body     = [self getJsonStringForStripe];
