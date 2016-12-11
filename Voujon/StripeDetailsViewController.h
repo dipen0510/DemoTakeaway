@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Stripe/Stripe.h>
 
-@interface StripeDetailsViewController : UIViewController <STPPaymentCardTextFieldDelegate> {
+@interface StripeDetailsViewController : UIViewController <STPPaymentCardTextFieldDelegate, DataSyncManagerDelegate> {
     NSString *MinimumRateForDiscount, *DiscountPercentage;
     NSString *MoreAmountReqdForDiscount;
 }

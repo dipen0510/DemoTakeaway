@@ -534,7 +534,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Voujon/DataSyncManager.m"
@@ -570,7 +570,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Voujon/StripeDetailsViewController.m"
-            timestampString = "486206549.159323"
+            timestampString = "501943642.580268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -581,14 +581,14 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__50-[StripeDetailsViewController startPaymentProcess]_block_invoke"
-                  moduleName = "Wise Men Grills"
+                  moduleName = "W4FirePizza"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/Office/Projects/Demo%20Takeaway/Source/Base/W4Fire_pizza_Apr26_FINAL/Voujon/StripeDetailsViewController.m"
-                  timestampString = "495184121.141508"
+                  timestampString = "501944128.588817"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
                   offsetFromSymbolStart = "100">
                </Location>
                <Location
@@ -596,14 +596,14 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__50-[StripeDetailsViewController startPaymentProcess]_block_invoke_2"
-                  moduleName = "Wise Men Grills"
+                  moduleName = "W4FirePizza"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/Office/Projects/Demo%20Takeaway/Source/Base/W4Fire_pizza_Apr26_FINAL/Voujon/StripeDetailsViewController.m"
-                  timestampString = "495184121.141653"
+                  timestampString = "501944128.589023"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
                   offsetFromSymbolStart = "12">
                </Location>
             </Locations>
@@ -727,7 +727,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "977"
             endingLineNumber = "977"
-            landmarkName = "-isDiscountToBeAddedForThreshold:"
+            landmarkName = "-createOrderXML"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -770,7 +770,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Voujon/StripeDetailsViewController.m"
-            timestampString = "486206651.125076"
+            timestampString = "501943642.580268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
@@ -1187,6 +1187,134 @@
                   offsetFromSymbolStart = "1997">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Voujon/StripeDetailsViewController.m"
+            timestampString = "501943642.580268"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "-prepareDictonaryForStripe"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Voujon/StripeDetailsViewController.m"
+            timestampString = "501943642.580268"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
+            landmarkName = "-prepareDictonaryForStripe"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Voujon/StripeDetailsViewController.m"
+            timestampString = "501943642.580268"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "-createBackendCharge"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Voujon/StripeDetailsViewController.m"
+            timestampString = "501943642.580268"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "-createBackendCharge"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Voujon/DataSyncManager.m"
+            timestampString = "501943283.266402"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-startPOSTWebServicesForStripeWithData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Voujon/StripeDetailsViewController.m"
+            timestampString = "501943623.793036"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-didFinishServiceWithSuccess:andServiceKey:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Voujon/DataSyncManager.m"
+            timestampString = "501943856.549403"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "-startPOSTWebServicesForStripeWithData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Voujon/DataSyncManager.m"
+            timestampString = "501943859.327465"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "-startPOSTWebServicesForStripeWithData:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

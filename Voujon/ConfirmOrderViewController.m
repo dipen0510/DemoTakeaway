@@ -66,7 +66,7 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     _payPalConfig.payPalShippingAddressOption = PayPalShippingAddressOptionPayPal;
     
     //Ashwani :: Set sandbox mode
-    [PayPalMobile preconnectWithEnvironment:PayPalEnvironmentProduction];
+//    [PayPalMobile preconnectWithEnvironment:PayPalEnvironmentProduction];
     //[PayPalMobile preconnectWithEnvironment:PayPalEnvironmentSandbox];
     
     

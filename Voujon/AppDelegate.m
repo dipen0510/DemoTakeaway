@@ -31,7 +31,7 @@
     [[SharedContent sharedInstance] setCartArr:[[NSMutableArray alloc] init]];
     
     //Ashwani : : Final Key
-    [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentProduction : @"AS0Q0Jy4KvM8QC2IANEoLtmH_amgBB_f-wYz6oa-NdKdriGjVp4Ysa6oFakPfvUOC94zCtd2V8xFSYAH"}];
+//    [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentSandbox : @"AS0Q0Jy4KvM8QC2IANEoLtmH_amgBB_f-wYz6oa-NdKdriGjVp4Ysa6oFakPfvUOC94zCtd2V8xFSYAH"}];
     
     
     //-----------PUSHWOOSH PART-----------
