@@ -43,6 +43,7 @@
 		184D3DB61B84BBDA00545081 /* ic_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184D3DAE1B84BBDA00545081 /* ic_menu@2x.png */; };
 		185417771BDB62DA0017B70C /* EditOrderCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185417751BDB62DA0017B70C /* EditOrderCustomTableViewCell.m */; };
 		185417781BDB62DA0017B70C /* EditOrderCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185417761BDB62DA0017B70C /* EditOrderCustomTableViewCell.xib */; };
+		1857A4CB1DFDC1510096995E /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 1857A4CA1DFDC1510096995E /* splash.png */; };
 		18616B571B98E0840077A87A /* OrderReceiptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18616B561B98E0840077A87A /* OrderReceiptViewController.m */; };
 		186939C71B845455007AF80B /* ListingCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186939C51B845455007AF80B /* ListingCustomTableViewCell.m */; };
 		186939C81B845455007AF80B /* ListingCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186939C61B845455007AF80B /* ListingCustomTableViewCell.xib */; };
@@ -103,7 +104,6 @@
 		D456365A1B8DDDFD003DCA53 /* ic_add_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45636571B8DDDFD003DCA53 /* ic_add_48pt_2x.png */; };
 		D45636601B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D456365D1B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png */; };
 		D45636661B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45636631B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png */; };
-		D49BFB021DC23AED0058433A /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = D49BFB011DC23AED0058433A /* splash.png */; };
 		D4BB2B671B901EC40075F161 /* right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BB2B661B901EC40075F161 /* right_arrow@2x.png */; };
 		D4BB2B791B9066BD0075F161 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B711B9066BD0075F161 /* libPayPalMobile.a */; };
 		D4BB2B7B1B9067780075F161 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B7A1B9067780075F161 /* Accelerate.framework */; };
@@ -134,7 +134,7 @@
 		182382D91CD5D90B00A11A9C /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
 		182382DB1CD5D9B900A11A9C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		182382DD1CD5D9C600A11A9C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		182EC3D11B83B8B500A061A3 /* Choudharys BD9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Choudharys BD9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		182EC3D11B83B8B500A061A3 /* W4FirePizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = W4FirePizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182EC3D51B83B8B500A061A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182EC3D61B83B8B500A061A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		182EC3D81B83B8B500A061A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -180,6 +180,7 @@
 		185417741BDB62DA0017B70C /* EditOrderCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditOrderCustomTableViewCell.h; sourceTree = "<group>"; };
 		185417751BDB62DA0017B70C /* EditOrderCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditOrderCustomTableViewCell.m; sourceTree = "<group>"; };
 		185417761BDB62DA0017B70C /* EditOrderCustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditOrderCustomTableViewCell.xib; sourceTree = "<group>"; };
+		1857A4CA1DFDC1510096995E /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		18616B551B98E0840077A87A /* OrderReceiptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderReceiptViewController.h; sourceTree = "<group>"; };
 		18616B561B98E0840077A87A /* OrderReceiptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderReceiptViewController.m; sourceTree = "<group>"; };
 		186939C41B845455007AF80B /* ListingCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingCustomTableViewCell.h; sourceTree = "<group>"; };
@@ -285,7 +286,6 @@
 		D45636571B8DDDFD003DCA53 /* ic_add_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_add_48pt_2x.png; sourceTree = "<group>"; };
 		D456365D1B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_keyboard_arrow_down_48pt_2x.png; sourceTree = "<group>"; };
 		D45636631B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_keyboard_arrow_up_48pt_2x.png; sourceTree = "<group>"; };
-		D49BFB011DC23AED0058433A /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		D4BB2B661B901EC40075F161 /* right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow@2x.png"; sourceTree = "<group>"; };
 		D4BB2B691B9066BD0075F161 /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
 		D4BB2B6A1B9066BD0075F161 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
@@ -361,7 +361,7 @@
 		182EC3D21B83B8B500A061A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				182EC3D11B83B8B500A061A3 /* Choudharys BD9.app */,
+				182EC3D11B83B8B500A061A3 /* W4FirePizza.app */,
 				182EC3EA1B83B8B500A061A3 /* W4FirePizza.xctest */,
 			);
 			name = Products;
@@ -439,7 +439,7 @@
 		182EC3FB1B83BA7D00A061A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D49BFB011DC23AED0058433A /* splash.png */,
+				1857A4CA1DFDC1510096995E /* splash.png */,
 				18C250E11CA5641500E81C70 /* minus.png */,
 				18C250E21CA5641500E81C70 /* plus.png */,
 				18F4C4F91C8EF60F00886692 /* ic_minus.png */,
@@ -733,7 +733,7 @@
 			);
 			name = W4FirePizza;
 			productName = Voujon;
-			productReference = 182EC3D11B83B8B500A061A3 /* Choudharys BD9.app */;
+			productReference = 182EC3D11B83B8B500A061A3 /* W4FirePizza.app */;
 			productType = "com.apple.product-type.application";
 		};
 		182EC3E91B83B8B500A061A3 /* W4FirePizzaTests */ = {
@@ -812,7 +812,6 @@
 				185417781BDB62DA0017B70C /* EditOrderCustomTableViewCell.xib in Resources */,
 				182EC4191B83F33700A061A3 /* menu-icon.png in Resources */,
 				D4BB2B671B901EC40075F161 /* right_arrow@2x.png in Resources */,
-				D49BFB021DC23AED0058433A /* splash.png in Resources */,
 				182EC4071B83EB6D00A061A3 /* home.png in Resources */,
 				186B1EE71B939D8600783218 /* Checked-checkbox.png in Resources */,
 				182EC3E51B83B8B500A061A3 /* LaunchScreen.xib in Resources */,
@@ -838,6 +837,7 @@
 				184D3DB01B84BBDA00545081 /* ic_contactus@2x.png in Resources */,
 				182EC4011B83E77400A061A3 /* order.png in Resources */,
 				186939C81B845455007AF80B /* ListingCustomTableViewCell.xib in Resources */,
+				1857A4CB1DFDC1510096995E /* splash.png in Resources */,
 				184D3D861B84935500545081 /* icon@2x.png in Resources */,
 				184D3DB21B84BBDA00545081 /* home@2x.png in Resources */,
 				1887B17A1B94E47F008E8A5A /* ic_add_48pt.png in Resources */,
@@ -1061,8 +1061,8 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.choudharysBD9;
-				PRODUCT_NAME = "Choudharys BD9";
-				PROVISIONING_PROFILE = "74bbe573-bcbd-4d19-8fa8-20bc1a0506e8";
+				PRODUCT_NAME = W4FirePizza;
+				PROVISIONING_PROFILE = "4c4d8358-8a29-46e1-8e08-c48ccd674a6a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1092,8 +1092,8 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.choudharysBD9;
-				PRODUCT_NAME = "Choudharys BD9";
-				PROVISIONING_PROFILE = "74bbe573-bcbd-4d19-8fa8-20bc1a0506e8";
+				PRODUCT_NAME = W4FirePizza;
+				PROVISIONING_PROFILE = "4c4d8358-8a29-46e1-8e08-c48ccd674a6a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
