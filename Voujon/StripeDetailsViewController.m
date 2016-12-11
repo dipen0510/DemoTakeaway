@@ -128,9 +128,9 @@
 }
 
 
-- (void)createBackendChargeWithToken:(STPToken *)token
-                          completion:(void (^)(PKPaymentAuthorizationStatus))completion {
-    NSURL *url = [NSURL URLWithString:@"http://choudharysbd3.ibrarhussain.co.uk/payment.php"];
+- (void)createBackendCharge
+                           {
+    NSURL *url = [NSURL URLWithString:@"https://rhitapi.co.uk/api/stripe/chargecard"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
     NSString *body     = [self getJsonStringForStripe];
