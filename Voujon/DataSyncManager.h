@@ -26,4 +26,5 @@
 -(void)startGETWebServicesWithBaseURL;
 -(void)startPOSTWebServicesWithData:(id)postData;
 
+-(void)startPOSTWebServicesForStripeWithData:(id)postData;
 @end
