@@ -134,7 +134,7 @@
 		182382D91CD5D90B00A11A9C /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
 		182382DB1CD5D9B900A11A9C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		182382DD1CD5D9C600A11A9C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		182EC3D11B83B8B500A061A3 /* W4FirePizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = W4FirePizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		182EC3D11B83B8B500A061A3 /* Choudharys BD9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Choudharys BD9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		182EC3D51B83B8B500A061A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182EC3D61B83B8B500A061A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		182EC3D81B83B8B500A061A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -361,7 +361,7 @@
 		182EC3D21B83B8B500A061A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				182EC3D11B83B8B500A061A3 /* W4FirePizza.app */,
+				182EC3D11B83B8B500A061A3 /* Choudharys BD9.app */,
 				182EC3EA1B83B8B500A061A3 /* W4FirePizza.xctest */,
 			);
 			name = Products;
@@ -733,7 +733,7 @@
 			);
 			name = W4FirePizza;
 			productName = Voujon;
-			productReference = 182EC3D11B83B8B500A061A3 /* W4FirePizza.app */;
+			productReference = 182EC3D11B83B8B500A061A3 /* Choudharys BD9.app */;
 			productType = "com.apple.product-type.application";
 		};
 		182EC3E91B83B8B500A061A3 /* W4FirePizzaTests */ = {
@@ -1061,8 +1061,8 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.choudharysBD9;
-				PRODUCT_NAME = W4FirePizza;
-				PROVISIONING_PROFILE = "4c4d8358-8a29-46e1-8e08-c48ccd674a6a";
+				PRODUCT_NAME = "Choudharys BD9";
+				PROVISIONING_PROFILE = "ba8e89d6-0d78-49c4-958a-b9cd65a47fb9";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1092,8 +1092,8 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.choudharysBD9;
-				PRODUCT_NAME = W4FirePizza;
-				PROVISIONING_PROFILE = "4c4d8358-8a29-46e1-8e08-c48ccd674a6a";
+				PRODUCT_NAME = "Choudharys BD9";
+				PROVISIONING_PROFILE = "ba8e89d6-0d78-49c4-958a-b9cd65a47fb9";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
