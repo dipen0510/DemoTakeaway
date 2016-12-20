@@ -1062,7 +1062,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.choudharysBD3;
 				PRODUCT_NAME = "Choudharys BD3";
-				PROVISIONING_PROFILE = "34d0a370-106f-4de3-ae27-24248d4c5ea5";
+				PROVISIONING_PROFILE = "57a29a09-1765-48fc-a086-9f4013b43971";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1093,7 +1093,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.choudharysBD3;
 				PRODUCT_NAME = "Choudharys BD3";
-				PROVISIONING_PROFILE = "34d0a370-106f-4de3-ae27-24248d4c5ea5";
+				PROVISIONING_PROFILE = "57a29a09-1765-48fc-a086-9f4013b43971";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
