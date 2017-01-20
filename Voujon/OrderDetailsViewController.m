@@ -976,6 +976,11 @@
 
 - (BOOL) validateFreeDeliveryThreshold {
     
+    if ([[[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"DeliveryPolicy"] valueForKey:@"FreeDeliveryThreshold"] floatValue] == 0.0 || [[[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"DeliveryPolicy"] valueForKey:@"FreeRadius"] floatValue] == 0.0 ) {
+        
+        return true;
+    }
+    
     if ([[[self getTotalPrice] stringByReplacingOccurrencesOfString:@"£" withString:@""] floatValue] < [[[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"DeliveryPolicy"] valueForKey:@"FreeDeliveryThreshold"] floatValue]) {
         
         return false;

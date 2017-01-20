@@ -586,7 +586,7 @@
                   moduleName = "Chilli Hut Nottingham"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/Office/Projects/DemoTakeaway_11Dec/Voujon/StripeDetailsViewController.m"
-                  timestampString = "504711533.314127"
+                  timestampString = "506633863.294306"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "117"
@@ -601,7 +601,7 @@
                   moduleName = "Chilli Hut Nottingham"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/Office/Projects/DemoTakeaway_11Dec/Voujon/StripeDetailsViewController.m"
-                  timestampString = "504711533.314312"
+                  timestampString = "506633863.294442"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "117"
@@ -762,11 +762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Voujon/OrderDetailsViewController.m"
-            timestampString = "492240200.348837"
+            timestampString = "506633861.612522"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1029"
-            endingLineNumber = "1029"
+            startingLineNumber = "1034"
+            endingLineNumber = "1034"
             landmarkName = "-prepareDictionarForOrderDetails"
             landmarkType = "5">
          </BreakpointContent>
@@ -826,11 +826,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Voujon/OrderDetailsViewController.m"
-            timestampString = "492240871.022648"
+            timestampString = "506633861.612522"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1213"
-            endingLineNumber = "1213"
+            startingLineNumber = "1218"
+            endingLineNumber = "1218"
             landmarkName = "-calculateDistance:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1000,11 +1000,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Voujon/OrderDetailsViewController.m"
-            timestampString = "492240871.022648"
+            timestampString = "506633861.612522"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1226"
-            endingLineNumber = "1226"
+            startingLineNumber = "1231"
+            endingLineNumber = "1231"
             landmarkName = "-calculateDistance:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1016,11 +1016,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Voujon/OrderDetailsViewController.m"
-            timestampString = "492240871.022648"
+            timestampString = "506633861.612522"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1041"
-            endingLineNumber = "1041"
+            startingLineNumber = "1046"
+            endingLineNumber = "1046"
             landmarkName = "-prepareDictionarForOrderDetails"
             landmarkType = "5">
          </BreakpointContent>
@@ -1278,6 +1278,22 @@
             startingLineNumber = "132"
             endingLineNumber = "132"
             landmarkName = "-startPOSTWebServicesForStripeWithData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Voujon/OrderDetailsViewController.m"
+            timestampString = "506633995.398933"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "979"
+            endingLineNumber = "979"
+            landmarkName = "-validateFreeDeliveryThreshold"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
