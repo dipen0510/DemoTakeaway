@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Stripe/Stripe.h>
+#import <OneSignal/OneSignal.h>
 
 @import CoreLocation;
 @import SystemConfiguration;
@@ -33,22 +34,9 @@
     //Ashwani : : Final Key
 //    [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentSandbox : @"AS0Q0Jy4KvM8QC2IANEoLtmH_amgBB_f-wYz6oa-NdKdriGjVp4Ysa6oFakPfvUOC94zCtd2V8xFSYAH"}];
     
-    
-    //-----------PUSHWOOSH PART-----------
-    // set custom delegate for push handling, in our case - view controller
-    PushNotificationManager * pushManager = [PushNotificationManager pushManager];
-    pushManager.delegate = self;
-    
-    // handling push on app start
-    [[PushNotificationManager pushManager] handlePushReceived:launchOptions];
-    
-    // make sure we count app open in Pushwoosh stats
-    [[PushNotificationManager pushManager] sendAppOpen];
-    
-    // register for push notifications!
-    [[PushNotificationManager pushManager] registerForPushNotifications];
-    
     [Stripe setDefaultPublishableKey:@"pk_test_3Uvqk3cfNhYfDMvrqXt7rCEF"];
+    
+    [OneSignal initWithLaunchOptions:launchOptions appId:@"bcd97a7b-94aa-4749-9e29-b6dc8ad875a3"];
     
     return YES;
 }
@@ -56,21 +44,17 @@
 
 // system push notification registration success callback, delegate to pushManager
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [[PushNotificationManager pushManager] handlePushRegistration:deviceToken];
+//    [[PushNotificationManager pushManager] handlePushRegistration:deviceToken];
 }
 
 // system push notification registration error callback, delegate to pushManager
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    [[PushNotificationManager pushManager] handlePushRegistrationFailure:error];
+//    [[PushNotificationManager pushManager] handlePushRegistrationFailure:error];
 }
 
 // system push notifications callback, delegate to pushManager
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [[PushNotificationManager pushManager] handlePushReceived:userInfo];
-}
-
-- (void) onPushAccepted:(PushNotificationManager *)pushManager withNotification:(NSDictionary *)pushNotification onStart:(BOOL)onStart {
-    NSLog(@"Push notification received");
+//    [[PushNotificationManager pushManager] handlePushReceived:userInfo];
 }
 
 

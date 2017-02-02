@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1803DDCC1BB08BAC0013135C /* EditOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803DDCB1BB08BAC0013135C /* EditOrderViewController.m */; };
 		181A042D1BA5F01F00512228 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A042C1BA5F01F00512228 /* AlertViewController.m */; };
-		182382DA1CD5D90B00A11A9C /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182382D91CD5D90B00A11A9C /* Pushwoosh.framework */; };
 		182382DC1CD5D9B900A11A9C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 182382DB1CD5D9B900A11A9C /* libz.tbd */; };
 		182382DE1CD5D9C600A11A9C /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 182382DD1CD5D9C600A11A9C /* libstdc++.tbd */; };
 		182EC3D71B83B8B500A061A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182EC3D61B83B8B500A061A3 /* main.m */; };
@@ -82,6 +81,8 @@
 		18E151FA1B85E3E400319AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E151F91B85E3E400319AC2 /* UIKit.framework */; };
 		18F4C4FA1C8EF60F00886692 /* ic_minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F4C4F91C8EF60F00886692 /* ic_minus.png */; };
 		55F876461C89A96900F30C3C /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F876451C89A96900F30C3C /* splash.png */; };
+		99C0175AC707BEB4846B8E22 /* libPods-W4FirePizza.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DFEC6224EDE9DB7D63965C /* libPods-W4FirePizza.a */; };
+		C6576BD67C7A6C2876A681D3 /* libPods-W4FirePizzaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC135701114CA3FBF32B1A5B /* libPods-W4FirePizzaTests.a */; };
 		D45636121B8D8FC6003DCA53 /* DataSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */; };
 		D45636131B8D8FC6003DCA53 /* SharedContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D45636111B8D8FC6003DCA53 /* SharedContent.m */; };
 		D456363F1B8D905A003DCA53 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D456361B1B8D905A003DCA53 /* AFHTTPRequestOperation.m */; };
@@ -129,9 +130,9 @@
 /* Begin PBXFileReference section */
 		1803DDCA1BB08BAC0013135C /* EditOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditOrderViewController.h; sourceTree = "<group>"; };
 		1803DDCB1BB08BAC0013135C /* EditOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditOrderViewController.m; sourceTree = "<group>"; };
+		180FCD451E43CC5100B268AD /* libPods-W4FirePizzaTests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-W4FirePizzaTests.a"; path = "Pods/../build/Debug-iphoneos/libPods-W4FirePizzaTests.a"; sourceTree = "<group>"; };
 		181A042B1BA5F01F00512228 /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
 		181A042C1BA5F01F00512228 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
-		182382D91CD5D90B00A11A9C /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
 		182382DB1CD5D9B900A11A9C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		182382DD1CD5D9C600A11A9C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		182EC3D11B83B8B500A061A3 /* W4FirePizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = W4FirePizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,7 +241,13 @@
 		18E151F71B85E3D800319AC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		18E151F91B85E3E400319AC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18F4C4F91C8EF60F00886692 /* ic_minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_minus.png; sourceTree = "<group>"; };
+		258AF76E0667CEC8163AEC75 /* Pods-W4FirePizza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W4FirePizza.debug.xcconfig"; path = "Pods/Target Support Files/Pods-W4FirePizza/Pods-W4FirePizza.debug.xcconfig"; sourceTree = "<group>"; };
+		3E9257361B90A41DAC0D773C /* Pods-W4FirePizzaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W4FirePizzaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-W4FirePizzaTests/Pods-W4FirePizzaTests.release.xcconfig"; sourceTree = "<group>"; };
+		48DFEC6224EDE9DB7D63965C /* libPods-W4FirePizza.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-W4FirePizza.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F876451C89A96900F30C3C /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		8DFF6BA6A8D6CCAE39C5B705 /* Pods-W4FirePizzaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W4FirePizzaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-W4FirePizzaTests/Pods-W4FirePizzaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2ECD8FC8423C8075281651B /* Pods-W4FirePizza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W4FirePizza.release.xcconfig"; path = "Pods/Target Support Files/Pods-W4FirePizza/Pods-W4FirePizza.release.xcconfig"; sourceTree = "<group>"; };
+		CC135701114CA3FBF32B1A5B /* libPods-W4FirePizzaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-W4FirePizzaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D456360D1B8D8FC6003DCA53 /* DataSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSyncManager.h; sourceTree = "<group>"; };
 		D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSyncManager.m; sourceTree = "<group>"; };
 		D456360F1B8D8FC6003DCA53 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -329,13 +336,13 @@
 				D4BB2B7F1B9067840075F161 /* AVFoundation.framework in Frameworks */,
 				D4BB2B7D1B90677F0075F161 /* AudioToolbox.framework in Frameworks */,
 				D4BB2B7B1B9067780075F161 /* Accelerate.framework in Frameworks */,
-				182382DA1CD5D90B00A11A9C /* Pushwoosh.framework in Frameworks */,
 				D4BB2B791B9066BD0075F161 /* libPayPalMobile.a in Frameworks */,
 				18E151FA1B85E3E400319AC2 /* UIKit.framework in Frameworks */,
 				18E151F81B85E3D900319AC2 /* CoreGraphics.framework in Frameworks */,
 				18E151F61B85E3CE00319AC2 /* Foundation.framework in Frameworks */,
 				18E151F41B85E3BA00319AC2 /* CoreLocation.framework in Frameworks */,
 				182EC4251B8404E600A061A3 /* MapKit.framework in Frameworks */,
+				99C0175AC707BEB4846B8E22 /* libPods-W4FirePizza.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +350,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6576BD67C7A6C2876A681D3 /* libPods-W4FirePizzaTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +363,8 @@
 				182EC3D31B83B8B500A061A3 /* Voujon */,
 				182EC3ED1B83B8B500A061A3 /* VoujonTests */,
 				182EC3D21B83B8B500A061A3 /* Products */,
+				C9F8DB692CD9A623AE280105 /* Pods */,
+				59C51A4A7F74871722F8F996 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -477,7 +487,6 @@
 			children = (
 				189164771CFAEA68008B5807 /* SVProgressHUD */,
 				18BED1CB1CDA91B00065ED88 /* Stripe.framework */,
-				182382D91CD5D90B00A11A9C /* Pushwoosh.framework */,
 				183D2B321BA2B69700F89BCC /* XMLWriter */,
 				186E36EE1B963904003B136E /* FormSheet */,
 				1887B16F1B94D75B008E8A5A /* XMLDictionary */,
@@ -642,6 +651,27 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		59C51A4A7F74871722F8F996 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				180FCD451E43CC5100B268AD /* libPods-W4FirePizzaTests.a */,
+				48DFEC6224EDE9DB7D63965C /* libPods-W4FirePizza.a */,
+				CC135701114CA3FBF32B1A5B /* libPods-W4FirePizzaTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9F8DB692CD9A623AE280105 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				258AF76E0667CEC8163AEC75 /* Pods-W4FirePizza.debug.xcconfig */,
+				C2ECD8FC8423C8075281651B /* Pods-W4FirePizza.release.xcconfig */,
+				8DFF6BA6A8D6CCAE39C5B705 /* Pods-W4FirePizzaTests.debug.xcconfig */,
+				3E9257361B90A41DAC0D773C /* Pods-W4FirePizzaTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D45636191B8D905A003DCA53 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -723,9 +753,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 182EC3F41B83B8B500A061A3 /* Build configuration list for PBXNativeTarget "W4FirePizza" */;
 			buildPhases = (
+				ED19FC5069488D0DE87E73F0 /* [CP] Check Pods Manifest.lock */,
 				182EC3CD1B83B8B500A061A3 /* Sources */,
 				182EC3CE1B83B8B500A061A3 /* Frameworks */,
 				182EC3CF1B83B8B500A061A3 /* Resources */,
+				BE8D0CAF30BBD178D9944DB5 /* [CP] Embed Pods Frameworks */,
+				EAA55813B8918320AB13F85B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -740,9 +773,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 182EC3F71B83B8B500A061A3 /* Build configuration list for PBXNativeTarget "W4FirePizzaTests" */;
 			buildPhases = (
+				844FFE8AED191549BDE7CFC1 /* [CP] Check Pods Manifest.lock */,
 				182EC3E61B83B8B500A061A3 /* Sources */,
 				182EC3E71B83B8B500A061A3 /* Frameworks */,
 				182EC3E81B83B8B500A061A3 /* Resources */,
+				DBF97D36D6B8D88B4BD2DEBA /* [CP] Embed Pods Frameworks */,
+				8541B24787D3E76F4FA5C740 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -771,7 +807,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -852,6 +888,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		844FFE8AED191549BDE7CFC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8541B24787D3E76F4FA5C740 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-W4FirePizzaTests/Pods-W4FirePizzaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE8D0CAF30BBD178D9944DB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-W4FirePizza/Pods-W4FirePizza-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBF97D36D6B8D88B4BD2DEBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-W4FirePizzaTests/Pods-W4FirePizzaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAA55813B8918320AB13F85B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-W4FirePizza/Pods-W4FirePizza-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED19FC5069488D0DE87E73F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		182EC3CD1B83B8B500A061A3 /* Sources */ = {
@@ -1039,6 +1168,7 @@
 		};
 		182EC3F51B83B8B500A061A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 258AF76E0667CEC8163AEC75 /* Pods-W4FirePizza.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ibrar Hussain (26JX845KJ2)";
@@ -1055,10 +1185,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Voujon/PayPalMobile",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
 				PRODUCT_NAME = W4FirePizza;
@@ -1070,6 +1202,7 @@
 		};
 		182EC3F61B83B8B500A061A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2ECD8FC8423C8075281651B /* Pods-W4FirePizza.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ibrar Hussain (26JX845KJ2)";
@@ -1086,10 +1219,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Voujon/PayPalMobile",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
 				PRODUCT_NAME = W4FirePizza;
@@ -1101,6 +1236,7 @@
 		};
 		182EC3F81B83B8B500A061A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DFF6BA6A8D6CCAE39C5B705 /* Pods-W4FirePizzaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Rajesh VAidya (63899FD5KP)";
@@ -1123,6 +1259,7 @@
 		};
 		182EC3F91B83B8B500A061A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E9257361B90A41DAC0D773C /* Pods-W4FirePizzaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Rajesh VAidya (63899FD5KP)";
