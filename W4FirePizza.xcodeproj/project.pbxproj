@@ -81,6 +81,9 @@
 		18E151F81B85E3D900319AC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E151F71B85E3D800319AC2 /* CoreGraphics.framework */; };
 		18E151FA1B85E3E400319AC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E151F91B85E3E400319AC2 /* UIKit.framework */; };
 		18F4C4FA1C8EF60F00886692 /* ic_minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F4C4F91C8EF60F00886692 /* ic_minus.png */; };
+		55F876461C89A96900F30C3C /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F876451C89A96900F30C3C /* splash.png */; };
+		99C0175AC707BEB4846B8E22 /* libPods-W4FirePizza.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DFEC6224EDE9DB7D63965C /* libPods-W4FirePizza.a */; };
+		C6576BD67C7A6C2876A681D3 /* libPods-W4FirePizzaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC135701114CA3FBF32B1A5B /* libPods-W4FirePizzaTests.a */; };
 		D45636121B8D8FC6003DCA53 /* DataSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */; };
 		D45636131B8D8FC6003DCA53 /* SharedContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D45636111B8D8FC6003DCA53 /* SharedContent.m */; };
 		D456363F1B8D905A003DCA53 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D456361B1B8D905A003DCA53 /* AFHTTPRequestOperation.m */; };
@@ -240,6 +243,13 @@
 		18E151F71B85E3D800319AC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		18E151F91B85E3E400319AC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18F4C4F91C8EF60F00886692 /* ic_minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_minus.png; sourceTree = "<group>"; };
+		258AF76E0667CEC8163AEC75 /* Pods-W4FirePizza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W4FirePizza.debug.xcconfig"; path = "Pods/Target Support Files/Pods-W4FirePizza/Pods-W4FirePizza.debug.xcconfig"; sourceTree = "<group>"; };
+		3E9257361B90A41DAC0D773C /* Pods-W4FirePizzaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W4FirePizzaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-W4FirePizzaTests/Pods-W4FirePizzaTests.release.xcconfig"; sourceTree = "<group>"; };
+		48DFEC6224EDE9DB7D63965C /* libPods-W4FirePizza.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-W4FirePizza.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F876451C89A96900F30C3C /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		8DFF6BA6A8D6CCAE39C5B705 /* Pods-W4FirePizzaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W4FirePizzaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-W4FirePizzaTests/Pods-W4FirePizzaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2ECD8FC8423C8075281651B /* Pods-W4FirePizza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W4FirePizza.release.xcconfig"; path = "Pods/Target Support Files/Pods-W4FirePizza/Pods-W4FirePizza.release.xcconfig"; sourceTree = "<group>"; };
+		CC135701114CA3FBF32B1A5B /* libPods-W4FirePizzaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-W4FirePizzaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D456360D1B8D8FC6003DCA53 /* DataSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSyncManager.h; sourceTree = "<group>"; };
 		D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSyncManager.m; sourceTree = "<group>"; };
 		D456360F1B8D8FC6003DCA53 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
