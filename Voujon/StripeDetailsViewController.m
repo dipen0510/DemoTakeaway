@@ -60,7 +60,7 @@
     manager.delegate = self;
     [manager startPOSTWebServicesForStripeWithData:[self prepareDictonaryForStripe]];
     
-//    [self createBackendCharge];
+    //    [self createBackendCharge];
     //[self startPaymentProcess];
     
 }
@@ -81,10 +81,10 @@
         
         [SVProgressHUD dismiss];
         [self dismissViewControllerAnimated:YES completion:nil];
-   
+        
         
     }
- 
+    
     
 }
 
@@ -121,16 +121,16 @@
              
          } else {
              //[self createBackendChargeWithToken:token completion:^(PKPaymentAuthorizationStatus status) {
-//             }];
+             //             }];
          }
      }];
     
 }
 
 
-- (void)createBackendChargeWithToken:(STPToken *)token
-                          completion:(void (^)(PKPaymentAuthorizationStatus))completion {
-    NSURL *url = [NSURL URLWithString:@"http://wisemengrills.ibrarhussain.co.uk/payment.php"];
+- (void)createBackendCharge
+{
+    NSURL *url = [NSURL URLWithString:@"https://rhitapi.co.uk/api/stripe/chargecard"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
     NSString *body     = [self getJsonStringForStripe];
@@ -207,25 +207,25 @@
 //                           [self handleStripeError:error];
 //                       });
 //                   } else {
-//                       
+//
 //                       NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-//                       
+//
 //                       [[SharedContent sharedInstance] setStripeToken:token.tokenId];
-//                       
+//
 //                       if ([@"Success" isEqualToString:[responseDict valueForKey:@"status"]]) {
-//                           
-//                           
+//
+//
 //                           [[NSNotificationCenter defaultCenter] postNotificationName:@"StripePaymentSuccessNotification" object:nil];
-//                           
+//
 //                           dispatch_async(dispatch_get_main_queue(), ^{
 //                               [SVProgressHUD dismiss];
 //                               [self dismissViewControllerAnimated:YES completion:nil];
 //                           });
-//                           
-//                           
+//
+//
 //                       }
 //                       else {
-//                           
+//
 //                           dispatch_async(dispatch_get_main_queue(), ^{
 //                               [SVProgressHUD dismiss];
 //                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
@@ -235,13 +235,13 @@
 //                                                                     otherButtonTitles:nil];
 //                               [alert show];
 //                           });
-//                           
-//                           
-//                           
+//
+//
+//
 //                       }
-//                       
-//                       
-//                       
+//
+//
+//
 //                   }
 //               }];
 //    [task resume];
@@ -277,9 +277,9 @@
     
     
     
-//    [dict setObject:@"gbp" forKey:@"currency"];
-//    [dict setObject:token forKey:@"stripeToken"];
-//    [dict setObject:@"" forKey:@"description"];
+    //    [dict setObject:@"gbp" forKey:@"currency"];
+    //    [dict setObject:token forKey:@"stripeToken"];
+    //    [dict setObject:@"" forKey:@"description"];
     
     return dict;
 }
@@ -311,14 +311,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
 //Ashwani :: This function will be use to get updated price after discount
@@ -360,7 +359,7 @@
     finalPriceToCharge = (finalPriceToCharge + [[SharedContent sharedInstance] extraDistanceDeliveryCharge]);
     
     return [NSString stringWithFormat:@"%d",(int)(finalPriceToCharge * 100)];
-//    return [NSNumber numberWithDouble:(finalPriceToCharge*100)];
+    //    return [NSNumber numberWithDouble:(finalPriceToCharge*100)];
 }
 //*********************END***************************//
 - (NSString *) getTotalPrice {
