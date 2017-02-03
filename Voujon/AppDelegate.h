@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Pushwoosh/PushNotificationManager.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,PushNotificationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
      NSDate *storedDate;
     

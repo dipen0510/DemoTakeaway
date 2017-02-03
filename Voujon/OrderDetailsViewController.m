@@ -70,15 +70,15 @@
     }
     
     
-    if ([[SharedContent sharedInstance] StripePublishKey]) {
+//    if ([[SharedContent sharedInstance] StripePublishKey]) {
         self.stripeLbl.hidden = NO;
         self.stripeCheckbox.hidden = NO;
-    }
-    else {
-        self.stripeLbl.hidden = YES;
-        self.stripeCheckbox.hidden = YES;
-    }
-    
+//    }
+//    else {
+//        self.stripeLbl.hidden = YES;
+//        self.stripeCheckbox.hidden = YES;
+//    }
+
     if ([[SharedContent sharedInstance] PaypalSecretKey]) {
         self.paypalLbl.hidden = NO;
         self.paypalCheckbox.hidden = NO;

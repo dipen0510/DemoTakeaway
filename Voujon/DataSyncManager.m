@@ -98,4 +98,42 @@
 }
 
 
+
+
+
+-(void)startPOSTWebServicesForStripeWithData:(id)postData
+{
+    
+    NSURL* url;
+    url = [NSURL URLWithString:@"http://rhitapi.co.uk/api/stripe"];
+    
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+    manager.requestSerializer = [AFJSONRequestSerializer serializerWithWritingOptions:NSJSONWritingPrettyPrinted];
+    manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    [manager POST:self.serviceKey parameters:(id)postData success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            
+            if ([[responseObject valueForKey:@"Status"] isEqualToString:@"Success"]) {
+                [delegate didFinishServiceWithSuccess:(NSMutableDictionary *)responseObject andServiceKey:self.serviceKey];
+            }
+            else {
+                [delegate didFinishServiceWithFailure:[[responseObject valueForKey:@"error"] valueForKey:@"message"]];
+            }
+            
+            
+        }
+        else {
+            [delegate didFinishServiceWithFailure:@"Unexpected network error"];
+        }
+    }
+          failure:^(NSURLSessionDataTask *task, NSError *error) {
+              
+              [delegate didFinishServiceWithFailure:@"Please check your internet connection and try again later"];
+              
+          }];
+    
+}
+
+
 @end

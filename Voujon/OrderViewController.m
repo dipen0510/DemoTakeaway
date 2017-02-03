@@ -1697,11 +1697,13 @@ int toppingTag = -1;
     
     if ([[[menuDisplayArr objectAtIndex:indexPath.section] valueForKey:@"CategoryName"] containsString:@"VOUJON"]) {
         
-         [tmpCartDict setObject:[dict valueForKey:@"Code"] forKey:@"Code"];
-         [tmpCartDict setObject:[dict valueForKey:@"Description"] forKey:@"Description"];
-         [tmpCartDict setObject:[dict valueForKey:@"DisplaySequence"] forKey:@"DisplaySequence"];
-         [tmpCartDict setObject:[dict valueForKey:@"Name"] forKey:@"Name"];
-         [tmpCartDict setObject:[dict valueForKey:@"ProductId"] forKey:@"ProductId"];
+        [tmpCartDict setObject:[dict valueForKey:@"Code"] forKey:@"Code"];
+        [tmpCartDict setObject:[dict valueForKey:@"Description"] forKey:@"Description"];
+        [tmpCartDict setObject:[dict valueForKey:@"DisplaySequence"] forKey:@"DisplaySequence"];
+        [tmpCartDict setObject:[dict valueForKey:@"Name"] forKey:@"Name"];
+        [tmpCartDict setObject:[dict valueForKey:@"ProductId"] forKey:@"ProductId"];
+        
+        [tmpCartDict setObject:[dict valueForKey:@"isCustomProduct"] forKey:@"isCustomProduct"];
         
         [tmpCartDict setObject:[dict valueForKey:@"isCustomProduct"] forKey:@"isCustomProduct"];
         
@@ -1736,18 +1738,18 @@ int toppingTag = -1;
             [tmpCartDict setObject:[[[dict valueForKey:@"ProductVariants"] objectAtIndex:0] valueForKey:@"ProductVariantId"] forKey:@"ProductVariantId"];
         }
         
-         
-         float StandardOfferPrice = 0.0f;
-         if(selectedPickerContent != nil)
-         {
-             if([selectedPickerContent valueForKey:@"Price"] != (id)[NSNull null])
-                 StandardOfferPrice = StandardOfferPrice+[[selectedPickerContent valueForKey:@"Price"] floatValue];
-         }
-         else
-         {
-             if([[[dict valueForKey:@"ProductVariants"] objectAtIndex:0] valueForKey:@"Price"] != (id)[NSNull null])
-                 StandardOfferPrice = StandardOfferPrice+[[[[dict valueForKey:@"ProductVariants"] objectAtIndex:0] valueForKey:@"Price"] floatValue];
-         }
+        
+        float StandardOfferPrice = 0.0f;
+        if(selectedPickerContent != nil)
+        {
+            if([selectedPickerContent valueForKey:@"Price"] != (id)[NSNull null])
+                StandardOfferPrice = StandardOfferPrice+[[selectedPickerContent valueForKey:@"Price"] floatValue];
+        }
+        else
+        {
+            if([[[dict valueForKey:@"ProductVariants"] objectAtIndex:0] valueForKey:@"Price"] != (id)[NSNull null])
+                StandardOfferPrice = StandardOfferPrice+[[[[dict valueForKey:@"ProductVariants"] objectAtIndex:0] valueForKey:@"Price"] floatValue];
+        }
         
         
         NSMutableArray *arrSelectedObj = [[NSMutableArray alloc] init];
@@ -1782,7 +1784,7 @@ int toppingTag = -1;
         selectedStrengthPickerContent = nil;
     }
     else {
-    
+        
         if ([[dict valueForKey:@"ProductVariants"] count] > 1) {
             [tmpCartDict setObject:[dict valueForKey:@"Code"] forKey:@"Code"];
             [tmpCartDict setObject:[dict valueForKey:@"Description"] forKey:@"Description"];
@@ -2048,47 +2050,47 @@ int toppingTag = -1;
                                 }
                             }
                             /*
-                            for(int j = 0; j < tempArr.count; j++)
-                            {
-                                NSMutableDictionary *dicTemp = [tempArr objectAtIndex:j];
-                                prodCompOptCount++;
-                                NSString *itemNo = [@(prodCompOptCount) stringValue];
-                                NSString *keyName = [@"ProductComponentsOptions" stringByAppendingString:itemNo];
-                                [tmpCartDict setObject:dicTemp forKey:keyName];
-                                
-                                NSMutableArray *arrToppingOpt = [dicTemp valueForKey:@"LstProductVariantOptions"];
-                                if(arrToppingOpt.count>0)
-                                {
-                                    NSMutableArray *toppingArr = [[NSMutableArray alloc] init];
-                                    NSMutableArray *arrVarIndexes = [selOfferToppings valueForKey:@"SelVariantIndex"];
-                                    if([arrVarIndexes containsObject:[@(j) stringValue]])
-                                    {
-                                        int index = (int)[arrVarIndexes indexOfObject:[@(j) stringValue]];
-                                        NSMutableDictionary *obj = [selOfferToppings objectAtIndex:index ];
-                                        
-                                        NSLog(@"objVar: %@", obj);
-                                        for(int k = 0; k < arrToppingOpt.count; k++)
-                                        {
-                                            NSString *key = [NSString stringWithFormat:@"ProductOptTopping%d%d", j, k];
-                                            NSLog(@"%@",[obj valueForKey:key]);
-                                            [toppingArr addObjectsFromArray:[obj valueForKey:key]];
-                                        }
-                                    }
-                                    
-                                    for(int k = 0; k < toppingArr.count; k++)
-                                    {
-                                        if([[toppingArr objectAtIndex:k] valueForKey:@"Price"] != (id)[NSNull null])
-                                        {
-                                            StandardOfferPrice = StandardOfferPrice+[[[toppingArr objectAtIndex:k] valueForKey:@"Price"] floatValue];
-                                        }
-                                        
-                                    }
-                                    
-                                    NSString *keySubName = [@"ProductComponentsSubOptions" stringByAppendingString:itemNo];
-                                    [tmpCartDict setObject:toppingArr forKey:keySubName];
-                                    
-                                }
-                            }*/
+                             for(int j = 0; j < tempArr.count; j++)
+                             {
+                             NSMutableDictionary *dicTemp = [tempArr objectAtIndex:j];
+                             prodCompOptCount++;
+                             NSString *itemNo = [@(prodCompOptCount) stringValue];
+                             NSString *keyName = [@"ProductComponentsOptions" stringByAppendingString:itemNo];
+                             [tmpCartDict setObject:dicTemp forKey:keyName];
+                             
+                             NSMutableArray *arrToppingOpt = [dicTemp valueForKey:@"LstProductVariantOptions"];
+                             if(arrToppingOpt.count>0)
+                             {
+                             NSMutableArray *toppingArr = [[NSMutableArray alloc] init];
+                             NSMutableArray *arrVarIndexes = [selOfferToppings valueForKey:@"SelVariantIndex"];
+                             if([arrVarIndexes containsObject:[@(j) stringValue]])
+                             {
+                             int index = (int)[arrVarIndexes indexOfObject:[@(j) stringValue]];
+                             NSMutableDictionary *obj = [selOfferToppings objectAtIndex:index ];
+                             
+                             NSLog(@"objVar: %@", obj);
+                             for(int k = 0; k < arrToppingOpt.count; k++)
+                             {
+                             NSString *key = [NSString stringWithFormat:@"ProductOptTopping%d%d", j, k];
+                             NSLog(@"%@",[obj valueForKey:key]);
+                             [toppingArr addObjectsFromArray:[obj valueForKey:key]];
+                             }
+                             }
+                             
+                             for(int k = 0; k < toppingArr.count; k++)
+                             {
+                             if([[toppingArr objectAtIndex:k] valueForKey:@"Price"] != (id)[NSNull null])
+                             {
+                             StandardOfferPrice = StandardOfferPrice+[[[toppingArr objectAtIndex:k] valueForKey:@"Price"] floatValue];
+                             }
+                             
+                             }
+                             
+                             NSString *keySubName = [@"ProductComponentsSubOptions" stringByAppendingString:itemNo];
+                             [tmpCartDict setObject:toppingArr forKey:keySubName];
+                             
+                             }
+                             }*/
                         }
                         
                     }
@@ -2141,18 +2143,18 @@ int toppingTag = -1;
             //Ashwani :: March 03, 2016 check here product varients topping is complsory or not
             NSMutableArray *arrVar = [dict valueForKey:@"ProductVariants"];
             for(int i = 0; i < arrVar.count; i++)
+            {
+                
+                NSMutableArray *arrVarOpt = [[arrVar objectAtIndex:i ] valueForKey:@"ProductVariantOptions"];
+                for(int j = 0; j < arrVarOpt.count; j++)
                 {
-                    
-                    NSMutableArray *arrVarOpt = [[arrVar objectAtIndex:i ] valueForKey:@"ProductVariantOptions"];
-                    for(int j = 0; j < arrVarOpt.count; j++)
-                        {
-                            if([[[arrVarOpt objectAtIndex:j]valueForKey:@"MinSelect"] integerValue]>0 && selectedToppings.count == 0)
-                            {
-                                isToppingError = YES;
-                                break;
-                            }
-                        }
+                    if([[[arrVarOpt objectAtIndex:j]valueForKey:@"MinSelect"] integerValue]>0 && selectedToppings.count == 0)
+                    {
+                        isToppingError = YES;
+                        break;
+                    }
                 }
+            }
             
             if(selectedprodOptionsPickerContent != nil && selectedprodOptionsPickerContent.count != 0)
             {

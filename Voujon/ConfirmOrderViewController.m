@@ -66,7 +66,7 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     _payPalConfig.payPalShippingAddressOption = PayPalShippingAddressOptionPayPal;
     
     //Ashwani :: Set sandbox mode
-    [PayPalMobile preconnectWithEnvironment:PayPalEnvironmentProduction];
+//    [PayPalMobile preconnectWithEnvironment:PayPalEnvironmentProduction];
     //[PayPalMobile preconnectWithEnvironment:PayPalEnvironmentSandbox];
     
     
@@ -923,13 +923,13 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             [xmlWriter writeCharacters:[dict valueForKey:@"DiscountRate"]];
         else
             [xmlWriter writeCharacters:@"0"];
-    else
-    [xmlWriter writeCharacters:@"0"];
+        else
+            [xmlWriter writeCharacters:@"0"];
     [xmlWriter writeEndElement];
     
-//    [xmlWriter writeStartElement:@"DiscountRate"];
-//    [xmlWriter writeCharacters:@"0"];
-//    [xmlWriter writeEndElement];
+    //    [xmlWriter writeStartElement:@"DiscountRate"];
+    //    [xmlWriter writeCharacters:@"0"];
+    //    [xmlWriter writeEndElement];
     
     
     

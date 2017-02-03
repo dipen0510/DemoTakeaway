@@ -55,9 +55,56 @@
     
     [SVProgressHUD showWithStatus:@"Processing details"];
     
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = kStripeCharge;
+    manager.delegate = self;
+    [manager startPOSTWebServicesForStripeWithData:[self prepareDictonaryForStripe]];
     
-    [self startPaymentProcess];
+//    [self createBackendCharge];
+    //[self startPaymentProcess];
     
+}
+
+
+
+#pragma mark - DATASYNCMANGER DELEGATE
+
+-(void)didFinishServiceWithSuccess:(NSMutableDictionary *)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    NSMutableDictionary* responseDict = [[NSMutableDictionary alloc] initWithDictionary:responseData];
+    
+    if ([requestServiceKey isEqualToString:kStripeCharge]) {
+        
+        //[[SharedContent sharedInstance] setStripeToken:token.tokenId];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"StripePaymentSuccessNotification" object:nil];
+        
+        [SVProgressHUD dismiss];
+        [self dismissViewControllerAnimated:YES completion:nil];
+   
+        
+    }
+ 
+    
+}
+
+-(void)didFinishServiceWithFailure:(NSString *)errorMsg {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"Server error"
+                                                  message:@"Request timed out, please try again later."
+                                                 delegate:self
+                                        cancelButtonTitle:@"OK"
+                                        otherButtonTitles: nil];
+    
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    [alert show];
+    
+    return;
 }
 
 - (void) startPaymentProcess {
@@ -73,8 +120,8 @@
              
              
          } else {
-             [self createBackendChargeWithToken:token completion:^(PKPaymentAuthorizationStatus status) {
-             }];
+             //[self createBackendChargeWithToken:token completion:^(PKPaymentAuthorizationStatus status) {
+//             }];
          }
      }];
     
@@ -86,7 +133,7 @@
     NSURL *url = [NSURL URLWithString:@"http://wisemengrills.ibrarhussain.co.uk/payment.php"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *body     = [self getJsonStringForStripeForToken:token.tokenId];
+    NSString *body     = [self getJsonStringForStripe];
     request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
@@ -103,7 +150,7 @@
                        
                        NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
                        
-                       [[SharedContent sharedInstance] setStripeToken:token.tokenId];
+                       //[[SharedContent sharedInstance] setStripeToken:token.tokenId];
                        
                        if ([@"Success" isEqualToString:[responseDict valueForKey:@"status"]]) {
                            
@@ -141,20 +188,98 @@
 }
 
 
--(NSString*)getJsonStringForStripeForToken:(NSString *)token {
+//- (void)createBackendChargeWithToken:(STPToken *)token
+//                          completion:(void (^)(PKPaymentAuthorizationStatus))completion {
+//    NSURL *url = [NSURL URLWithString:@"http://rhitapi.co.uk/api/stripe/chargecard"];
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+//    request.HTTPMethod = @"POST";
+//    NSString *body     = [self getJsonStringForStripeForToken];
+//    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
+//    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+//    NSURLSessionDataTask *task =
+//    [session dataTaskWithRequest:request
+//               completionHandler:^(NSData *data,
+//                                   NSURLResponse *response,
+//                                   NSError *error) {
+//                   if (error) {
+//                       dispatch_async(dispatch_get_main_queue(), ^{
+//                           [self handleStripeError:error];
+//                       });
+//                   } else {
+//                       
+//                       NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+//                       
+//                       [[SharedContent sharedInstance] setStripeToken:token.tokenId];
+//                       
+//                       if ([@"Success" isEqualToString:[responseDict valueForKey:@"status"]]) {
+//                           
+//                           
+//                           [[NSNotificationCenter defaultCenter] postNotificationName:@"StripePaymentSuccessNotification" object:nil];
+//                           
+//                           dispatch_async(dispatch_get_main_queue(), ^{
+//                               [SVProgressHUD dismiss];
+//                               [self dismissViewControllerAnimated:YES completion:nil];
+//                           });
+//                           
+//                           
+//                       }
+//                       else {
+//                           
+//                           dispatch_async(dispatch_get_main_queue(), ^{
+//                               [SVProgressHUD dismiss];
+//                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                                               message:@"Please try again"
+//                                                                              delegate:nil
+//                                                                     cancelButtonTitle:@"OK"
+//                                                                     otherButtonTitles:nil];
+//                               [alert show];
+//                           });
+//                           
+//                           
+//                           
+//                       }
+//                       
+//                       
+//                       
+//                   }
+//               }];
+//    [task resume];
+//}
+
+
+-(NSString*)getJsonStringForStripe {
     NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self prepareDictonaryForStripe:token] options:NSJSONWritingPrettyPrinted error:&error];
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self prepareDictonaryForStripe] options:NSJSONWritingPrettyPrinted error:&error];
     return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
--(NSDictionary *)prepareDictonaryForStripe:(NSString *)token  {
+-(NSDictionary *)prepareDictonaryForStripe  {
     
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     
+    NSString* expiryMonth = @"";
+    
+    if (_paymentTextField.expirationMonth < 10) {
+        expiryMonth = [NSString stringWithFormat:@"0%ld",_paymentTextField.expirationMonth];
+    }
+    else {
+        expiryMonth = [NSString stringWithFormat:@"%ld",_paymentTextField.expirationMonth];
+    }
+    
+    [dict setObject:kBusinessID forKey:@"businessId"];
     [dict setObject:[self updatePriceAfterSelection] forKey:@"amount"];
-    [dict setObject:@"gbp" forKey:@"currency"];
-    [dict setObject:token forKey:@"stripeToken"];
-    [dict setObject:@"" forKey:@"description"];
+    
+    [dict setObject:_paymentTextField.cardNumber forKey:@"cardNo"];
+    [dict setObject:expiryMonth forKey:@"expiryMonth"];
+    [dict setObject:[NSString stringWithFormat:@"20%ld",_paymentTextField.expirationYear] forKey:@"expiryYear"];
+    [dict setObject:_paymentTextField.cvc forKey:@"cvc"];
+    
+    
+    
+//    [dict setObject:@"gbp" forKey:@"currency"];
+//    [dict setObject:token forKey:@"stripeToken"];
+//    [dict setObject:@"" forKey:@"description"];
     
     return dict;
 }
@@ -197,7 +322,7 @@
 
 
 //Ashwani :: This function will be use to get updated price after discount
--(NSNumber *)updatePriceAfterSelection
+-(NSString *)updatePriceAfterSelection
 {
     //Ashwani :: Nov 05, get Discount Items cost here from settings
     
@@ -234,8 +359,8 @@
     
     finalPriceToCharge = (finalPriceToCharge + [[SharedContent sharedInstance] extraDistanceDeliveryCharge]);
     
-    //return [NSString stringWithFormat:@"%f",(finalPriceToCharge * 100)];
-    return [NSNumber numberWithDouble:(finalPriceToCharge)];
+    return [NSString stringWithFormat:@"%d",(int)(finalPriceToCharge * 100)];
+//    return [NSNumber numberWithDouble:(finalPriceToCharge*100)];
 }
 //*********************END***************************//
 - (NSString *) getTotalPrice {
