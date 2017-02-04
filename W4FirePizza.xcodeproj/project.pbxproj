@@ -1194,7 +1194,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.wisemengrills;
 				PRODUCT_NAME = "Wise Men Grills";
-				PROVISIONING_PROFILE = "5d9babec-13b7-4aed-8216-e8eafc45adbe";
+				PROVISIONING_PROFILE = "e6a7d8e1-569a-4f75-8af0-41fa1d15fb6b";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1228,7 +1228,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.wisemengrills;
 				PRODUCT_NAME = "Wise Men Grills";
-				PROVISIONING_PROFILE = "5d9babec-13b7-4aed-8216-e8eafc45adbe";
+				PROVISIONING_PROFILE = "e6a7d8e1-569a-4f75-8af0-41fa1d15fb6b";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
