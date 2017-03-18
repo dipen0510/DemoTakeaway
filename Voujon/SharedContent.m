@@ -10,7 +10,7 @@
 
 @implementation SharedContent
 
-@synthesize cartArr,appSettingsDict,deliveryTimingArr,collectionTimingArr,orderDetailsDict, CurrentViewController, PaypalEmail, emailMsg,stripeToken, StripePublishKey, PaypalSecretKey,extraDistanceDeliveryCharge,extraDistanceInMiles,isRestoOpen;
+@synthesize cartArr,appSettingsDict,deliveryTimingArr,collectionTimingArr,orderDetailsDict, CurrentViewController, PaypalEmail, emailMsg,stripeToken, StripePublishKey, PaypalSecretKey,extraDistanceDeliveryCharge,extraDistanceInMiles,isRestoOpen, StripeSecretKey;
 
 static SharedContent *sharedObject = nil;
 

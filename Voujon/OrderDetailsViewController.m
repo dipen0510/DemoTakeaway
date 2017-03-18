@@ -1019,9 +1019,26 @@
 
 - (NSMutableDictionary *) prepareDictionarForOrderDetails {
     
+    NSString* paymentStr = @"";
+    
+    switch (paymentType) {
+        case 1:
+            paymentStr = @"Cash";
+            break;
+        case 2:
+            paymentStr = @"Paypal";
+            break;
+        case 3:
+            paymentStr = @"Card";
+            break;
+            
+        default:
+            break;
+    }
+    
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     
-    [dict setObject:self.instructionsTextView.text forKey:@"instructions"];
+    [dict setObject:[NSString stringWithFormat:@"%@\n\n\niOS\n%@",self.instructionsTextView.text,paymentStr] forKey:@"instructions"];
     [dict setObject:[NSNumber numberWithInt:orderType] forKey:@"orderType"];
     [dict setObject:[NSNumber numberWithInt:paymentType] forKey:@"paymentType"];
     

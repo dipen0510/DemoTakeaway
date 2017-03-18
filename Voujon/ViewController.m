@@ -76,6 +76,7 @@
         
         if ([responseDict valueForKey:@"Stripe"] && ![[responseDict valueForKey:@"Stripe"] isEqual:[NSNull null]]) {
             [[SharedContent sharedInstance] setStripePublishKey:[responseDict valueForKey:@"Stripe"]];
+            [[SharedContent sharedInstance] setStripeSecretKey:[responseDict valueForKey:@"ClientID"]];
             [Stripe setDefaultPublishableKey:[[SharedContent sharedInstance] StripePublishKey]];
         }
         if ([responseDict valueForKey:@"SecretKey"] && ![[responseDict valueForKey:@"SecretKey"] isEqual:[NSNull null]]) {

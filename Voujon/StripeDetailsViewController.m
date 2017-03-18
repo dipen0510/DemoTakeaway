@@ -55,13 +55,13 @@
     
     [SVProgressHUD showWithStatus:@"Processing details"];
     
-    DataSyncManager* manager = [[DataSyncManager alloc] init];
-    manager.serviceKey = kStripeCharge;
-    manager.delegate = self;
-    [manager startPOSTWebServicesForStripeWithData:[self prepareDictonaryForStripe]];
+//    DataSyncManager* manager = [[DataSyncManager alloc] init];
+//    manager.serviceKey = kStripeCharge;
+//    manager.delegate = self;
+//    [manager startPOSTWebServicesForStripeWithData:[self prepareDictonaryForStripe]];
     
-//    [self createBackendCharge];
-    //[self startPaymentProcess];
+
+    [self startPaymentProcess];
     
 }
 
@@ -73,7 +73,7 @@
     
     NSMutableDictionary* responseDict = [[NSMutableDictionary alloc] initWithDictionary:responseData];
     
-    if ([requestServiceKey isEqualToString:kStripeCharge]) {
+    if ([requestServiceKey isEqualToString:kStripeCharge] || [requestServiceKey isEqualToString:@"charges"]) {
         
         //[[SharedContent sharedInstance] setStripeToken:token.tokenId];
         
@@ -120,71 +120,82 @@
              
              
          } else {
-             //[self createBackendChargeWithToken:token completion:^(PKPaymentAuthorizationStatus status) {
-//             }];
+             [self createBackendChargeWithToken:token completion:^(PKPaymentAuthorizationStatus status) {
+             }];
          }
      }];
     
 }
 
 
-- (void)createBackendCharge
-                           {
-    NSURL *url = [NSURL URLWithString:@"https://rhitapi.co.uk/api/stripe/chargecard"];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    request.HTTPMethod = @"POST";
-    NSString *body     = [self getJsonStringForStripe];
-    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
-    NSURLSessionDataTask *task =
-    [session dataTaskWithRequest:request
-               completionHandler:^(NSData *data,
-                                   NSURLResponse *response,
-                                   NSError *error) {
-                   if (error) {
-                       dispatch_async(dispatch_get_main_queue(), ^{
-                           [self handleStripeError:error];
-                       });
-                   } else {
-                       
-                       NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                       
-                       //[[SharedContent sharedInstance] setStripeToken:token.tokenId];
-                       
-                       if ([@"Success" isEqualToString:[responseDict valueForKey:@"status"]]) {
-                           
-                           
-                           [[NSNotificationCenter defaultCenter] postNotificationName:@"StripePaymentSuccessNotification" object:nil];
-                           
-                           dispatch_async(dispatch_get_main_queue(), ^{
-                               [SVProgressHUD dismiss];
-                               [self dismissViewControllerAnimated:YES completion:nil];
-                           });
-                           
-                           
-                       }
-                       else {
-                           
-                           dispatch_async(dispatch_get_main_queue(), ^{
-                               [SVProgressHUD dismiss];
-                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                               message:@"Please try again"
-                                                                              delegate:nil
-                                                                     cancelButtonTitle:@"OK"
-                                                                     otherButtonTitles:nil];
-                               [alert show];
-                           });
-                           
-                           
-                           
-                       }
-                       
-                       
-                       
-                   }
-               }];
-    [task resume];
+//- (void)createBackendCharge
+//                           {
+//    NSURL *url = [NSURL URLWithString:@"https://rhitapi.co.uk/api/stripe/chargecard"];
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+//    request.HTTPMethod = @"POST";
+//    NSString *body     = [self getJsonStringForStripe];
+//    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
+//    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+//    NSURLSessionDataTask *task =
+//    [session dataTaskWithRequest:request
+//               completionHandler:^(NSData *data,
+//                                   NSURLResponse *response,
+//                                   NSError *error) {
+//                   if (error) {
+//                       dispatch_async(dispatch_get_main_queue(), ^{
+//                           [self handleStripeError:error];
+//                       });
+//                   } else {
+//                       
+//                       NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+//                       
+//                       //[[SharedContent sharedInstance] setStripeToken:token.tokenId];
+//                       
+//                       if ([@"Success" isEqualToString:[responseDict valueForKey:@"status"]]) {
+//                           
+//                           
+//                           [[NSNotificationCenter defaultCenter] postNotificationName:@"StripePaymentSuccessNotification" object:nil];
+//                           
+//                           dispatch_async(dispatch_get_main_queue(), ^{
+//                               [SVProgressHUD dismiss];
+//                               [self dismissViewControllerAnimated:YES completion:nil];
+//                           });
+//                           
+//                           
+//                       }
+//                       else {
+//                           
+//                           dispatch_async(dispatch_get_main_queue(), ^{
+//                               [SVProgressHUD dismiss];
+//                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                                               message:@"Please try again"
+//                                                                              delegate:nil
+//                                                                     cancelButtonTitle:@"OK"
+//                                                                     otherButtonTitles:nil];
+//                               [alert show];
+//                           });
+//                           
+//                           
+//                           
+//                       }
+//                       
+//                       
+//                       
+//                   }
+//               }];
+//    [task resume];
+//}
+
+
+- (void)createBackendChargeWithToken:(STPToken *)token completion:(void (^)(PKPaymentAuthorizationStatus))completion {
+    
+        DataSyncManager* manager = [[DataSyncManager alloc] init];
+        manager.serviceKey = @"charges";
+        manager.delegate = self;
+        [manager startStripePaymentChargeWithParams:[self prepareDictonaryForStripeBackendChargeForToken:token.tokenId]];
+    
+    
 }
 
 
@@ -248,41 +259,56 @@
 //}
 
 
--(NSString*)getJsonStringForStripe {
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self prepareDictonaryForStripe] options:NSJSONWritingPrettyPrinted error:&error];
-    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-}
+//-(NSString*)getJsonStringForStripe {
+//    NSError *error;
+//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self prepareDictonaryForStripe] options:NSJSONWritingPrettyPrinted error:&error];
+//    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+//}
+//
+//-(NSDictionary *)prepareDictonaryForStripe  {
+//    
+//    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+//    
+//    NSString* expiryMonth = @"";
+//    
+//    if (_paymentTextField.expirationMonth < 10) {
+//        expiryMonth = [NSString stringWithFormat:@"0%ld",_paymentTextField.expirationMonth];
+//    }
+//    else {
+//        expiryMonth = [NSString stringWithFormat:@"%ld",_paymentTextField.expirationMonth];
+//    }
+//    
+//    [dict setObject:kBusinessID forKey:@"businessId"];
+//    [dict setObject:[self updatePriceAfterSelection] forKey:@"amount"];
+//    
+//    [dict setObject:_paymentTextField.cardNumber forKey:@"cardNo"];
+//    [dict setObject:expiryMonth forKey:@"expiryMonth"];
+//    [dict setObject:[NSString stringWithFormat:@"20%ld",_paymentTextField.expirationYear] forKey:@"expiryYear"];
+//    [dict setObject:_paymentTextField.cvc forKey:@"cvc"];
+//    
+//    
+//    
+////    [dict setObject:@"gbp" forKey:@"currency"];
+////    [dict setObject:token forKey:@"stripeToken"];
+////    [dict setObject:@"" forKey:@"description"];
+//    
+//    return dict;
+//}
 
--(NSDictionary *)prepareDictonaryForStripe  {
+
+
+-(NSMutableDictionary *)prepareDictonaryForStripeBackendChargeForToken:(NSString *)token  {
     
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     
-    NSString* expiryMonth = @"";
-    
-    if (_paymentTextField.expirationMonth < 10) {
-        expiryMonth = [NSString stringWithFormat:@"0%ld",_paymentTextField.expirationMonth];
-    }
-    else {
-        expiryMonth = [NSString stringWithFormat:@"%ld",_paymentTextField.expirationMonth];
-    }
-    
-    [dict setObject:kBusinessID forKey:@"businessId"];
     [dict setObject:[self updatePriceAfterSelection] forKey:@"amount"];
-    
-    [dict setObject:_paymentTextField.cardNumber forKey:@"cardNo"];
-    [dict setObject:expiryMonth forKey:@"expiryMonth"];
-    [dict setObject:[NSString stringWithFormat:@"20%ld",_paymentTextField.expirationYear] forKey:@"expiryYear"];
-    [dict setObject:_paymentTextField.cvc forKey:@"cvc"];
-    
-    
-    
-//    [dict setObject:@"gbp" forKey:@"currency"];
-//    [dict setObject:token forKey:@"stripeToken"];
-//    [dict setObject:@"" forKey:@"description"];
+    [dict setObject:@"gbp" forKey:@"currency"];
+    [dict setObject:token forKey:@"source"];
+    [dict setObject:@"" forKey:@"description"];
     
     return dict;
 }
+
 
 - (void)handleStripeError:(NSError *) error {
     
