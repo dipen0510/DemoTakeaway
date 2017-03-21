@@ -55,13 +55,17 @@
     
     [SVProgressHUD showWithStatus:@"Processing details"];
     
-//    DataSyncManager* manager = [[DataSyncManager alloc] init];
-//    manager.serviceKey = kStripeCharge;
-//    manager.delegate = self;
-//    [manager startPOSTWebServicesForStripeWithData:[self prepareDictonaryForStripe]];
-    
+    if ([[SharedContent sharedInstance] StripePublishKey]) {
+        [self startPaymentProcess];
+    }
+    else {
+        DataSyncManager* manager = [[DataSyncManager alloc] init];
+        manager.serviceKey = kStripeCharge;
+        manager.delegate = self;
+        [manager startPOSTWebServicesForStripeWithData:[self prepareDictonaryForStripe]];
 
-    [self startPaymentProcess];
+    }
+    
     
 }
 
@@ -265,35 +269,35 @@
 //    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 //}
 //
-//-(NSDictionary *)prepareDictonaryForStripe  {
-//    
-//    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
-//    
-//    NSString* expiryMonth = @"";
-//    
-//    if (_paymentTextField.expirationMonth < 10) {
-//        expiryMonth = [NSString stringWithFormat:@"0%ld",_paymentTextField.expirationMonth];
-//    }
-//    else {
-//        expiryMonth = [NSString stringWithFormat:@"%ld",_paymentTextField.expirationMonth];
-//    }
-//    
-//    [dict setObject:kBusinessID forKey:@"businessId"];
-//    [dict setObject:[self updatePriceAfterSelection] forKey:@"amount"];
-//    
-//    [dict setObject:_paymentTextField.cardNumber forKey:@"cardNo"];
-//    [dict setObject:expiryMonth forKey:@"expiryMonth"];
-//    [dict setObject:[NSString stringWithFormat:@"20%ld",_paymentTextField.expirationYear] forKey:@"expiryYear"];
-//    [dict setObject:_paymentTextField.cvc forKey:@"cvc"];
-//    
-//    
-//    
-////    [dict setObject:@"gbp" forKey:@"currency"];
-////    [dict setObject:token forKey:@"stripeToken"];
-////    [dict setObject:@"" forKey:@"description"];
-//    
-//    return dict;
-//}
+-(NSDictionary *)prepareDictonaryForStripe  {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    NSString* expiryMonth = @"";
+    
+    if (_paymentTextField.expirationMonth < 10) {
+        expiryMonth = [NSString stringWithFormat:@"0%ld",_paymentTextField.expirationMonth];
+    }
+    else {
+        expiryMonth = [NSString stringWithFormat:@"%ld",_paymentTextField.expirationMonth];
+    }
+    
+    [dict setObject:kBusinessID forKey:@"businessId"];
+    [dict setObject:[self updatePriceAfterSelection] forKey:@"amount"];
+    
+    [dict setObject:_paymentTextField.cardNumber forKey:@"cardNo"];
+    [dict setObject:expiryMonth forKey:@"expiryMonth"];
+    [dict setObject:[NSString stringWithFormat:@"20%ld",_paymentTextField.expirationYear] forKey:@"expiryYear"];
+    [dict setObject:_paymentTextField.cvc forKey:@"cvc"];
+    
+    
+    
+//    [dict setObject:@"gbp" forKey:@"currency"];
+//    [dict setObject:token forKey:@"stripeToken"];
+//    [dict setObject:@"" forKey:@"description"];
+    
+    return dict;
+}
 
 
 
