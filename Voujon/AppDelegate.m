@@ -36,7 +36,7 @@
     
     [Stripe setDefaultPublishableKey:@"pk_test_3Uvqk3cfNhYfDMvrqXt7rCEF"];
     
-    [OneSignal initWithLaunchOptions:launchOptions appId:@"bcd97a7b-94aa-4749-9e29-b6dc8ad875a3"];
+    [OneSignal initWithLaunchOptions:launchOptions appId:@"db38efe6-084b-431c-aaff-25a51e667e59"];
     
     return YES;
 }
