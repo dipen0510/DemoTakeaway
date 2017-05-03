@@ -75,12 +75,14 @@
         
         
         if ([responseDict valueForKey:@"Stripe"] && ![[responseDict valueForKey:@"Stripe"] isEqual:[NSNull null]]) {
-            [[SharedContent sharedInstance] setStripePublishKey:[responseDict valueForKey:@"Stripe"]];
+            [[SharedContent sharedInstance] setStripePublishKey:[responseDict valueForKey:@"PaypalEmail"]];
+            [[SharedContent sharedInstance] setStripeSecretKey:[responseDict valueForKey:@"Stripe"]];
             [Stripe setDefaultPublishableKey:[[SharedContent sharedInstance] StripePublishKey]];
+            
         }
         if ([responseDict valueForKey:@"SecretKey"] && ![[responseDict valueForKey:@"SecretKey"] isEqual:[NSNull null]]) {
             [[SharedContent sharedInstance] setPaypalSecretKey:[responseDict valueForKey:@"SecretKey"]];
-//            [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentSandbox : [[SharedContent sharedInstance] PaypalSecretKey]}];
+            [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentProduction : [[SharedContent sharedInstance] PaypalSecretKey]}];
         }
         
         

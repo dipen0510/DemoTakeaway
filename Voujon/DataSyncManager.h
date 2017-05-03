@@ -27,4 +27,7 @@
 -(void)startPOSTWebServicesWithData:(id)postData;
 
 -(void)startPOSTWebServicesForStripeWithData:(id)postData;
+
+-(void)startStripePaymentChargeWithParams:(NSMutableDictionary *)postData;
+
 @end

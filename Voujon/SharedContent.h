@@ -30,6 +30,7 @@
 
 @property (strong, nonatomic) NSString *PaypalSecretKey;
 @property (strong, nonatomic) NSString *StripePublishKey;
+@property (strong, nonatomic) NSString *StripeSecretKey;
 
 @property float extraDistanceInMiles;
 @property float extraDistanceDeliveryCharge;

@@ -55,10 +55,16 @@
     
     [SVProgressHUD showWithStatus:@"Processing details"];
     
-    DataSyncManager* manager = [[DataSyncManager alloc] init];
-    manager.serviceKey = kStripeCharge;
-    manager.delegate = self;
-    [manager startPOSTWebServicesForStripeWithData:[self prepareDictonaryForStripe]];
+    if ([[SharedContent sharedInstance] StripePublishKey]) {
+        [self startPaymentProcess];
+    }
+    else {
+        DataSyncManager* manager = [[DataSyncManager alloc] init];
+        manager.serviceKey = kStripeCharge;
+        manager.delegate = self;
+        [manager startPOSTWebServicesForStripeWithData:[self prepareDictonaryForStripe]];
+
+    }
     
     //    [self createBackendCharge];
     //[self startPaymentProcess];
@@ -73,7 +79,7 @@
     
     NSMutableDictionary* responseDict = [[NSMutableDictionary alloc] initWithDictionary:responseData];
     
-    if ([requestServiceKey isEqualToString:kStripeCharge]) {
+    if ([requestServiceKey isEqualToString:kStripeCharge] || [requestServiceKey isEqualToString:@"charges"]) {
         
         //[[SharedContent sharedInstance] setStripeToken:token.tokenId];
         
@@ -248,12 +254,12 @@
 //}
 
 
--(NSString*)getJsonStringForStripe {
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self prepareDictonaryForStripe] options:NSJSONWritingPrettyPrinted error:&error];
-    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-}
-
+//-(NSString*)getJsonStringForStripe {
+//    NSError *error;
+//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self prepareDictonaryForStripe] options:NSJSONWritingPrettyPrinted error:&error];
+//    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+//}
+//
 -(NSDictionary *)prepareDictonaryForStripe  {
     
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
@@ -283,6 +289,21 @@
     
     return dict;
 }
+
+
+
+-(NSMutableDictionary *)prepareDictonaryForStripeBackendChargeForToken:(NSString *)token  {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:[self updatePriceAfterSelection] forKey:@"amount"];
+    [dict setObject:@"gbp" forKey:@"currency"];
+    [dict setObject:token forKey:@"source"];
+    [dict setObject:@"" forKey:@"description"];
+    
+    return dict;
+}
+
 
 - (void)handleStripeError:(NSError *) error {
     

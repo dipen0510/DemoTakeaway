@@ -136,4 +136,59 @@
 }
 
 
+
+
+-(void)startStripePaymentChargeWithParams:(NSMutableDictionary *)postData
+{
+    
+    NSURL* url;
+    url = [NSURL URLWithString:@"https://api.stripe.com/v1"];
+    
+    NSString* secretKey = @"sk_test_1oViCmIXkXtDQykknqLQZt1p";
+    
+    if (![[[SharedContent sharedInstance] StripeSecretKey] isEqualToString:@""] && [[SharedContent sharedInstance] StripeSecretKey]) {
+        secretKey = [[SharedContent sharedInstance] StripeSecretKey];
+    }
+    
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+    
+    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@",secretKey] forHTTPHeaderField:@"Authorization"];
+//    [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:secretKey password:@""];
+    
+    manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    
+    [manager POST:self.serviceKey parameters:postData success:^(NSURLSessionTask *task, id responseObject) {
+        
+        //if ([responseObject isKindOfClass:[NSDictionary class]]) {
+        
+        if ([[responseObject valueForKey:@"status"] isEqualToString:@"succeeded"]) {
+            
+            if ([delegate respondsToSelector:@selector(didFinishServiceWithSuccess:andServiceKey:)]) {
+                [delegate didFinishServiceWithSuccess:nil andServiceKey:self.serviceKey];
+            }
+        }
+        else {
+            //if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+            [delegate didFinishServiceWithFailure:[responseObject valueForKey:@"msg"]];
+            //}
+            
+        }
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+            [delegate didFinishServiceWithFailure:NSLocalizedString(@"Verify your internet connection and try again", nil)];
+        }
+        
+        
+    }];
+    
+    
+}
+
+
 @end
