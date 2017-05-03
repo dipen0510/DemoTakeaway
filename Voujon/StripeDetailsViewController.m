@@ -126,71 +126,82 @@
              
              
          } else {
-             //[self createBackendChargeWithToken:token completion:^(PKPaymentAuthorizationStatus status) {
-             //             }];
+             [self createBackendChargeWithToken:token completion:^(PKPaymentAuthorizationStatus status) {
+             }];
          }
      }];
     
 }
 
 
-- (void)createBackendCharge
-{
-    NSURL *url = [NSURL URLWithString:@"https://rhitapi.co.uk/api/stripe/chargecard"];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    request.HTTPMethod = @"POST";
-    NSString *body     = [self getJsonStringForStripe];
-    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
-    NSURLSessionDataTask *task =
-    [session dataTaskWithRequest:request
-               completionHandler:^(NSData *data,
-                                   NSURLResponse *response,
-                                   NSError *error) {
-                   if (error) {
-                       dispatch_async(dispatch_get_main_queue(), ^{
-                           [self handleStripeError:error];
-                       });
-                   } else {
-                       
-                       NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                       
-                       //[[SharedContent sharedInstance] setStripeToken:token.tokenId];
-                       
-                       if ([@"Success" isEqualToString:[responseDict valueForKey:@"status"]]) {
-                           
-                           
-                           [[NSNotificationCenter defaultCenter] postNotificationName:@"StripePaymentSuccessNotification" object:nil];
-                           
-                           dispatch_async(dispatch_get_main_queue(), ^{
-                               [SVProgressHUD dismiss];
-                               [self dismissViewControllerAnimated:YES completion:nil];
-                           });
-                           
-                           
-                       }
-                       else {
-                           
-                           dispatch_async(dispatch_get_main_queue(), ^{
-                               [SVProgressHUD dismiss];
-                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                               message:@"Please try again"
-                                                                              delegate:nil
-                                                                     cancelButtonTitle:@"OK"
-                                                                     otherButtonTitles:nil];
-                               [alert show];
-                           });
-                           
-                           
-                           
-                       }
-                       
-                       
-                       
-                   }
-               }];
-    [task resume];
+//- (void)createBackendCharge
+//                           {
+//    NSURL *url = [NSURL URLWithString:@"https://rhitapi.co.uk/api/stripe/chargecard"];
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+//    request.HTTPMethod = @"POST";
+//    NSString *body     = [self getJsonStringForStripe];
+//    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
+//    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+//    NSURLSessionDataTask *task =
+//    [session dataTaskWithRequest:request
+//               completionHandler:^(NSData *data,
+//                                   NSURLResponse *response,
+//                                   NSError *error) {
+//                   if (error) {
+//                       dispatch_async(dispatch_get_main_queue(), ^{
+//                           [self handleStripeError:error];
+//                       });
+//                   } else {
+//                       
+//                       NSDictionary* responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+//                       
+//                       //[[SharedContent sharedInstance] setStripeToken:token.tokenId];
+//                       
+//                       if ([@"Success" isEqualToString:[responseDict valueForKey:@"status"]]) {
+//                           
+//                           
+//                           [[NSNotificationCenter defaultCenter] postNotificationName:@"StripePaymentSuccessNotification" object:nil];
+//                           
+//                           dispatch_async(dispatch_get_main_queue(), ^{
+//                               [SVProgressHUD dismiss];
+//                               [self dismissViewControllerAnimated:YES completion:nil];
+//                           });
+//                           
+//                           
+//                       }
+//                       else {
+//                           
+//                           dispatch_async(dispatch_get_main_queue(), ^{
+//                               [SVProgressHUD dismiss];
+//                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                                               message:@"Please try again"
+//                                                                              delegate:nil
+//                                                                     cancelButtonTitle:@"OK"
+//                                                                     otherButtonTitles:nil];
+//                               [alert show];
+//                           });
+//                           
+//                           
+//                           
+//                       }
+//                       
+//                       
+//                       
+//                   }
+//               }];
+//    [task resume];
+//}
+
+
+- (void)createBackendChargeWithToken:(STPToken *)token completion:(void (^)(PKPaymentAuthorizationStatus))completion {
+    
+        DataSyncManager* manager = [[DataSyncManager alloc] init];
+        manager.serviceKey = @"charges";
+        manager.delegate = self;
+        [manager startStripePaymentChargeWithParams:[self prepareDictonaryForStripeBackendChargeForToken:token.tokenId]];
+    
+    
 }
 
 

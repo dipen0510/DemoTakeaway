@@ -88,6 +88,8 @@
         self.paypalCheckbox.hidden = YES;
     }
     
+    _choosePaymentLbl.text = [NSString stringWithFormat:@"Choose Payment Method (Extra £%0.2f will be charged for online payment)",[[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"ElectronicPaymentCharge"] floatValue]];
+    
     
 }
 
