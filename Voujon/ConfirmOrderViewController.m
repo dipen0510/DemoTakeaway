@@ -127,11 +127,19 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         if(![self validateFreeDeliveryThreshold])
             grandTotal = [NSString stringWithFormat:@"£%.2f",[[[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"DeliveryPolicy"] valueForKey:@"FreeDeliveryThreshold"] floatValue]];
     }
+    
+    grandTotal = [NSString stringWithFormat:@"£%.2f",([[grandTotal stringByReplacingOccurrencesOfString:@"£" withString:@""] floatValue] + [[SharedContent sharedInstance] extraDistanceDeliveryCharge])];
+    
+    
+    if([[[[[SharedContent sharedInstance] orderDetailsDict] valueForKey:@"paymentType"] stringValue] isEqualToString:@"1"]) {
+        _totalStaticLabel.text = @"Total";
+    }
     else {
+        _totalStaticLabel.text = @"Total (inclusive E-Pay Charges)";
         grandTotal = [NSString stringWithFormat:@"£%.2f",([[grandTotal stringByReplacingOccurrencesOfString:@"£" withString:@""] floatValue] + [[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"ElectronicPaymentCharge"] floatValue])];
     }
     
-    grandTotal = [NSString stringWithFormat:@"£%.2f",([[grandTotal stringByReplacingOccurrencesOfString:@"£" withString:@""] floatValue] + [[SharedContent sharedInstance] extraDistanceDeliveryCharge])];
+    
     
     self.totalPriceLbl.text = grandTotal;
     //*********************END***************************
@@ -170,12 +178,7 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     
     self.orderTypeValueLbl.text = strDate;
     
-    if([[[[[SharedContent sharedInstance] orderDetailsDict] valueForKey:@"orderType"] stringValue] isEqualToString:@"1"]) {
-        _totalStaticLabel.text = @"Total";
-    }
-    else {
-        _totalStaticLabel.text = @"Total (inclusive E-Payment Charges)";
-    }
+    
     
 }
 

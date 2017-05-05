@@ -1192,7 +1192,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.wisemengrills;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
 				PRODUCT_NAME = "Wise Men Grills";
 				PROVISIONING_PROFILE = "f1ddff83-c667-43ce-ab90-20ca6ba31902";
 				SDKROOT = iphoneos;
@@ -1226,7 +1226,7 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.wisemengrills;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
 				PRODUCT_NAME = "Wise Men Grills";
 				PROVISIONING_PROFILE = "f1ddff83-c667-43ce-ab90-20ca6ba31902";
 				SDKROOT = iphoneos;
