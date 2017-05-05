@@ -1506,10 +1506,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxC-fF-8Wx">
-                                <rect key="frame" x="25" y="268" width="45" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxC-fF-8Wx">
+                                <rect key="frame" x="25" y="268" width="208" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="SGu-v6-5T2"/>
+                                    <constraint firstAttribute="width" constant="208" id="SGu-v6-5T2"/>
                                     <constraint firstAttribute="height" constant="21" id="o8E-wL-f8C"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
@@ -1599,7 +1599,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="R5U-cJ-DPb" secondAttribute="trailing" constant="-16" id="ms0-nN-h9N"/>
                             <constraint firstItem="R5U-cJ-DPb" firstAttribute="top" secondItem="JE5-J7-28K" secondAttribute="topMargin" id="ndO-hG-mn0"/>
                             <constraint firstItem="YxC-fF-8Wx" firstAttribute="top" secondItem="wK8-uf-oG5" secondAttribute="bottom" constant="8" id="nmI-r9-RAT"/>
-                            <constraint firstItem="YxC-fF-8Wx" firstAttribute="leading" secondItem="JE5-J7-28K" secondAttribute="leadingMargin" constant="9" id="oKk-dL-zDM"/>
+                            <constraint firstItem="YxC-fF-8Wx" firstAttribute="leading" secondItem="JE5-J7-28K" secondAttribute="leadingMargin" constant="5" id="oKk-dL-zDM"/>
                             <constraint firstItem="zS6-qU-2lF" firstAttribute="leading" secondItem="JE5-J7-28K" secondAttribute="leadingMargin" id="phH-Qw-zq7"/>
                             <constraint firstItem="PQs-4o-E5c" firstAttribute="leading" secondItem="JE5-J7-28K" secondAttribute="leadingMargin" id="seg-Q0-07v"/>
                             <constraint firstItem="hTB-ev-432" firstAttribute="top" secondItem="R5U-cJ-DPb" secondAttribute="bottom" constant="8" id="xFV-hQ-cRY"/>
@@ -1613,6 +1613,7 @@
                         <outlet property="orderTypeSubHeadingLbl" destination="zS6-qU-2lF" id="I3X-cH-rDD"/>
                         <outlet property="orderTypeValueLbl" destination="dZU-SD-UmO" id="k3j-zG-w9l"/>
                         <outlet property="totalPriceLbl" destination="F8k-Ry-dQs" id="RPp-PS-VxM"/>
+                        <outlet property="totalStaticLabel" destination="YxC-fF-8Wx" id="u9A-9m-tCF"/>
                         <segue destination="uV8-da-cEe" kind="show" identifier="showOrderReceiptSegue" id="fLe-tb-QqK"/>
                         <segue destination="m9C-Ta-Q5I" kind="presentation" identifier="showStripeSegue" id="Usy-X9-TJ5"/>
                     </connections>

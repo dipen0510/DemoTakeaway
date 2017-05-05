@@ -353,8 +353,8 @@
 
 
 //Ashwani :: This function will be use to get updated price after discount
--(NSString *)updatePriceAfterSelection
-{
+-(NSString *)updatePriceAfterSelection {
+
     //Ashwani :: Nov 05, get Discount Items cost here from settings
     
     //NSLog(@"cartArr:%@",[[SharedContent sharedInstance] cartArr]);
@@ -389,6 +389,8 @@
     }
     
     finalPriceToCharge = (finalPriceToCharge + [[SharedContent sharedInstance] extraDistanceDeliveryCharge]);
+    
+    finalPriceToCharge = finalPriceToCharge + [[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"ElectronicPaymentCharge"] floatValue];
     
     return [NSString stringWithFormat:@"%d",(int)(finalPriceToCharge * 100)];
     //    return [NSNumber numberWithDouble:(finalPriceToCharge*100)];

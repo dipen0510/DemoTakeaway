@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *orderTypeHeadingLbl;
 @property (weak, nonatomic) IBOutlet UILabel *orderTypeSubHeadingLbl;
 @property (weak, nonatomic) IBOutlet UILabel *orderTypeValueLbl;
+@property (weak, nonatomic) IBOutlet UILabel *totalStaticLabel;
 
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)nextButtonTapped:(id)sender;

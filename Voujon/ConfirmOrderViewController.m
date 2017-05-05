@@ -35,7 +35,7 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     // Set up payPalConfig
     _payPalConfig = [[PayPalConfiguration alloc] init];
     _payPalConfig.acceptCreditCards = YES;
-    _payPalConfig.merchantName = @"W4Fire Pizza";
+    _payPalConfig.merchantName = @"Wise Men Grills";
     
     NSLog(@"Email : %@", [[SharedContent sharedInstance] PaypalEmail]);
 //    if([[SharedContent sharedInstance] PaypalEmail] != (id)[NSNull null])
@@ -127,6 +127,9 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         if(![self validateFreeDeliveryThreshold])
             grandTotal = [NSString stringWithFormat:@"£%.2f",[[[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"DeliveryPolicy"] valueForKey:@"FreeDeliveryThreshold"] floatValue]];
     }
+    else {
+        grandTotal = [NSString stringWithFormat:@"£%.2f",([[grandTotal stringByReplacingOccurrencesOfString:@"£" withString:@""] floatValue] + [[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"ElectronicPaymentCharge"] floatValue])];
+    }
     
     grandTotal = [NSString stringWithFormat:@"£%.2f",([[grandTotal stringByReplacingOccurrencesOfString:@"£" withString:@""] floatValue] + [[SharedContent sharedInstance] extraDistanceDeliveryCharge])];
     
@@ -166,6 +169,13 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     NSString *strDate = [df stringFromDate:date];
     
     self.orderTypeValueLbl.text = strDate;
+    
+    if([[[[[SharedContent sharedInstance] orderDetailsDict] valueForKey:@"orderType"] stringValue] isEqualToString:@"1"]) {
+        _totalStaticLabel.text = @"Total";
+    }
+    else {
+        _totalStaticLabel.text = @"Total (inclusive E-Payment Charges)";
+    }
     
 }
 
@@ -238,6 +248,12 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         
         // Optional: include multiple items
         
+        NSDecimalNumberHandler *behavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain
+                                                                                                  scale:2
+                                                                                       raiseOnExactness:NO
+                                                                                        raiseOnOverflow:NO
+                                                                                       raiseOnUnderflow:NO
+                                                                                    raiseOnDivideByZero:NO];
         
         NSMutableArray* tmpArr = [[NSMutableArray alloc] init];
         NSMutableArray* items = [[NSMutableArray alloc] init];
@@ -287,13 +303,15 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         // Optional: include payment details
         NSDecimalNumber *shipping = [[NSDecimalNumber alloc] initWithString:@"0.00"];
         NSDecimalNumber *tax = [[NSDecimalNumber alloc] initWithFloat:[[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"ElectronicPaymentCharge"] floatValue]];
+        NSDecimalNumber *roundedTax = [tax decimalNumberByRoundingAccordingToBehavior:behavior];
         PayPalPaymentDetails *paymentDetails = [PayPalPaymentDetails paymentDetailsWithSubtotal:subtotal
                                                                                    withShipping:shipping
-                                                                                        withTax:tax];
+                                                                                        withTax:roundedTax];
         NSDecimalNumber *total = [[subtotal decimalNumberByAdding:shipping] decimalNumberByAdding:tax];
+        NSDecimalNumber *roundedTotal = [total decimalNumberByRoundingAccordingToBehavior:behavior];
         
         PayPalPayment *payment = [[PayPalPayment alloc] init];
-        payment.amount = total;
+        payment.amount = roundedTotal;
         //payment.currencyCode = @"GBP";
         payment.currencyCode = @"GBP";
         payment.shortDescription = @"W4Fire Pizza Food Order";
