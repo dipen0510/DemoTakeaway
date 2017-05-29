@@ -52,6 +52,11 @@
     //Ashwani :: Nov 06 send ordertotal
     NSMutableDictionary* dictSettings = [[NSMutableDictionary alloc] initWithDictionary:[[SharedContent sharedInstance] appSettingsDict]];
     //Ashwani :: Nov 05, 2015 Add discount offer info here for Get Discount
+    NSString *subTotal = @"";
+    NSString *discountRate = @"";
+    NSString *grandTotal = @"";
+    
+    //Ashwani :: Nov 05, 2015 Add discount offer info here for Get Discount
     float DiscountRate = [[dictSettings valueForKey:@"DiscountRate"] floatValue];
     DiscountRate = DiscountRate*100;
     NSString *DiscountPercentage = [dictSettings valueForKey:@"DiscountRate"];
@@ -59,7 +64,6 @@
     
     double calculatedPrice = [[[self getTotalPrice] stringByReplacingOccurrencesOfString:@"£" withString:@""] doubleValue];
     double minimumAmountForDiscount = [MinimumRateForDiscount doubleValue];
-    NSString *grandTotal = @"";
     if([DiscountPercentage floatValue] > 0)
     {
         //Ashwani :: Nov 05, 2015 get here price of discount for
@@ -68,11 +72,24 @@
             double discountPrice = calculatedPrice*[DiscountPercentage doubleValue];
             double totalPrice = calculatedPrice-discountPrice;
             
+            subTotal = [NSString stringWithFormat:@"£%.2f",calculatedPrice];
+            discountRate = [NSString stringWithFormat:@"£%.2f",discountPrice];
             grandTotal = [NSString stringWithFormat:@"£%.2f",totalPrice];
+        }
+        else
+        {
+            subTotal = [self getTotalPrice];
+            discountRate = @"£0.0";
+            grandTotal = [self getTotalPrice];
+            
         }
     }
     else
+    {
+        subTotal = [self getTotalPrice];
+        discountRate = @"0.0";
         grandTotal = [self getTotalPrice];
+    }
     
     //Ashwani :: Nov 17 2015 Check here for ordertype and threshold
     if([[[[[SharedContent sharedInstance] orderDetailsDict] valueForKey:@"orderType"] stringValue] isEqualToString:@"1"])
@@ -82,6 +99,16 @@
     }
     
     grandTotal = [NSString stringWithFormat:@"£%.2f",([[grandTotal stringByReplacingOccurrencesOfString:@"£" withString:@""] floatValue] + [[SharedContent sharedInstance] extraDistanceDeliveryCharge])];
+    
+    
+    if([[[[[SharedContent sharedInstance] orderDetailsDict] valueForKey:@"paymentType"] stringValue] isEqualToString:@"1"]) {
+//        _totalStaticLabel.text = @"Total";
+    }
+    else {
+//        _totalStaticLabel.text = @"Total (inclusive E-Pay Charges)";
+        grandTotal = [NSString stringWithFormat:@"£%.2f",([[grandTotal stringByReplacingOccurrencesOfString:@"£" withString:@""] floatValue] + [[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"ElectronicPaymentCharge"] floatValue])];
+    }
+
     
     self.totalPriceLbl.text = grandTotal;
     
