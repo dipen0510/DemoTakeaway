@@ -35,7 +35,7 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     // Set up payPalConfig
     _payPalConfig = [[PayPalConfiguration alloc] init];
     _payPalConfig.acceptCreditCards = YES;
-    _payPalConfig.merchantName = @"Wise Men Grills";
+    _payPalConfig.merchantName = @"Chickish Derby";
     
     NSLog(@"Email : %@", [[SharedContent sharedInstance] PaypalEmail]);
 //    if([[SharedContent sharedInstance] PaypalEmail] != (id)[NSNull null])
