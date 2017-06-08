@@ -104,6 +104,7 @@
 		D456365A1B8DDDFD003DCA53 /* ic_add_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45636571B8DDDFD003DCA53 /* ic_add_48pt_2x.png */; };
 		D45636601B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D456365D1B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png */; };
 		D45636661B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45636631B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png */; };
+		D46CA21A1EE9ADC7004EC378 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = D46CA2191EE9ADC7004EC378 /* splash.png */; };
 		D4BB2B671B901EC40075F161 /* right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BB2B661B901EC40075F161 /* right_arrow@2x.png */; };
 		D4BB2B791B9066BD0075F161 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B711B9066BD0075F161 /* libPayPalMobile.a */; };
 		D4BB2B7B1B9067780075F161 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B7A1B9067780075F161 /* Accelerate.framework */; };
@@ -113,7 +114,6 @@
 		D4BB2B831B9067920075F161 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B821B9067920075F161 /* MessageUI.framework */; };
 		D4BB2B851B9067980075F161 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B841B9067980075F161 /* MobileCoreServices.framework */; };
 		D4BB2B871B9067A20075F161 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B861B9067A20075F161 /* SystemConfiguration.framework */; };
-		D4C5FBC81ED0CB7D0012DAB9 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = D4C5FBC71ED0CB7D0012DAB9 /* splash.png */; };
 		D4D518851B95CF46005F9A92 /* ConfirmOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D518841B95CF46005F9A92 /* ConfirmOrderViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -135,7 +135,7 @@
 		181A042C1BA5F01F00512228 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
 		182382DB1CD5D9B900A11A9C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		182382DD1CD5D9C600A11A9C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		182EC3D11B83B8B500A061A3 /* Wise Men Grills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wise Men Grills.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		182EC3D11B83B8B500A061A3 /* The Desert Company.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Desert Company.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		182EC3D51B83B8B500A061A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182EC3D61B83B8B500A061A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		182EC3D81B83B8B500A061A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -292,6 +292,7 @@
 		D45636571B8DDDFD003DCA53 /* ic_add_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_add_48pt_2x.png; sourceTree = "<group>"; };
 		D456365D1B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_keyboard_arrow_down_48pt_2x.png; sourceTree = "<group>"; };
 		D45636631B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_keyboard_arrow_up_48pt_2x.png; sourceTree = "<group>"; };
+		D46CA2191EE9ADC7004EC378 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		D4BB2B661B901EC40075F161 /* right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow@2x.png"; sourceTree = "<group>"; };
 		D4BB2B691B9066BD0075F161 /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
 		D4BB2B6A1B9066BD0075F161 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
@@ -316,7 +317,6 @@
 		D4BB2B821B9067920075F161 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		D4BB2B841B9067980075F161 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D4BB2B861B9067A20075F161 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		D4C5FBC71ED0CB7D0012DAB9 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		D4D518831B95CF46005F9A92 /* ConfirmOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmOrderViewController.h; sourceTree = "<group>"; };
 		D4D518841B95CF46005F9A92 /* ConfirmOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmOrderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -371,7 +371,7 @@
 		182EC3D21B83B8B500A061A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				182EC3D11B83B8B500A061A3 /* Wise Men Grills.app */,
+				182EC3D11B83B8B500A061A3 /* The Desert Company.app */,
 				182EC3EA1B83B8B500A061A3 /* W4FirePizza.xctest */,
 			);
 			name = Products;
@@ -449,7 +449,7 @@
 		182EC3FB1B83BA7D00A061A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D4C5FBC71ED0CB7D0012DAB9 /* splash.png */,
+				D46CA2191EE9ADC7004EC378 /* splash.png */,
 				18C250E11CA5641500E81C70 /* minus.png */,
 				18C250E21CA5641500E81C70 /* plus.png */,
 				18F4C4F91C8EF60F00886692 /* ic_minus.png */,
@@ -766,7 +766,7 @@
 			);
 			name = W4FirePizza;
 			productName = Voujon;
-			productReference = 182EC3D11B83B8B500A061A3 /* Wise Men Grills.app */;
+			productReference = 182EC3D11B83B8B500A061A3 /* The Desert Company.app */;
 			productType = "com.apple.product-type.application";
 		};
 		182EC3E91B83B8B500A061A3 /* W4FirePizzaTests */ = {
@@ -846,7 +846,6 @@
 				182EC3E01B83B8B500A061A3 /* Main.storyboard in Resources */,
 				182EC4031B83E77400A061A3 /* info.png in Resources */,
 				185417781BDB62DA0017B70C /* EditOrderCustomTableViewCell.xib in Resources */,
-				D4C5FBC81ED0CB7D0012DAB9 /* splash.png in Resources */,
 				182EC4191B83F33700A061A3 /* menu-icon.png in Resources */,
 				D4BB2B671B901EC40075F161 /* right_arrow@2x.png in Resources */,
 				182EC4071B83EB6D00A061A3 /* home.png in Resources */,
@@ -872,6 +871,7 @@
 				182EC4051B83E8BF00A061A3 /* refresh.png in Resources */,
 				186B1EE81B939D8600783218 /* unchecked_checkbox.png in Resources */,
 				184D3DB01B84BBDA00545081 /* ic_contactus@2x.png in Resources */,
+				D46CA21A1EE9ADC7004EC378 /* splash.png in Resources */,
 				182EC4011B83E77400A061A3 /* order.png in Resources */,
 				186939C81B845455007AF80B /* ListingCustomTableViewCell.xib in Resources */,
 				184D3D861B84935500545081 /* icon@2x.png in Resources */,
@@ -1192,9 +1192,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.wisemengrills;
-				PRODUCT_NAME = "Wise Men Grills";
-				PROVISIONING_PROFILE = "2e6718cf-3d86-4d17-95a0-9a4e2b230c1f";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.theDesertCompany;
+				PRODUCT_NAME = "The Desert Company";
+				PROVISIONING_PROFILE = "7d9c93f8-b8f5-4d84-b3e2-eaaea29dccc0";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1226,9 +1226,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.wisemengrills;
-				PRODUCT_NAME = "Wise Men Grills";
-				PROVISIONING_PROFILE = "2e6718cf-3d86-4d17-95a0-9a4e2b230c1f";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.theDesertCompany;
+				PRODUCT_NAME = "The Desert Company";
+				PROVISIONING_PROFILE = "7d9c93f8-b8f5-4d84-b3e2-eaaea29dccc0";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
