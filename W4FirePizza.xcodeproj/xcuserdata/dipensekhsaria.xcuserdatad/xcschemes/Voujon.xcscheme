@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "182EC3D01B83B8B500A061A3"
-            BuildableName = "Wise Men Grills.app"
+            BuildableName = "Bow House Chip Shop.app"
             BlueprintName = "W4FirePizza"
             ReferencedContainer = "container:W4FirePizza.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "182EC3D01B83B8B500A061A3"
-            BuildableName = "Wise Men Grills.app"
+            BuildableName = "Bow House Chip Shop.app"
             BlueprintName = "W4FirePizza"
             ReferencedContainer = "container:W4FirePizza.xcodeproj">
          </BuildableReference>
