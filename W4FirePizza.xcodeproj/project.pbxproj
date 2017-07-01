@@ -82,6 +82,7 @@
 		18F4C4FA1C8EF60F00886692 /* ic_minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F4C4F91C8EF60F00886692 /* ic_minus.png */; };
 		99C0175AC707BEB4846B8E22 /* libPods-W4FirePizza.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DFEC6224EDE9DB7D63965C /* libPods-W4FirePizza.a */; };
 		C6576BD67C7A6C2876A681D3 /* libPods-W4FirePizzaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC135701114CA3FBF32B1A5B /* libPods-W4FirePizzaTests.a */; };
+		D42EE2FF1F0785D800EE1051 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = D42EE2FE1F0785D800EE1051 /* splash.png */; };
 		D45636121B8D8FC6003DCA53 /* DataSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */; };
 		D45636131B8D8FC6003DCA53 /* SharedContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D45636111B8D8FC6003DCA53 /* SharedContent.m */; };
 		D456363F1B8D905A003DCA53 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D456361B1B8D905A003DCA53 /* AFHTTPRequestOperation.m */; };
@@ -104,7 +105,6 @@
 		D456365A1B8DDDFD003DCA53 /* ic_add_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45636571B8DDDFD003DCA53 /* ic_add_48pt_2x.png */; };
 		D45636601B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D456365D1B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png */; };
 		D45636661B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D45636631B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png */; };
-		D46CA21A1EE9ADC7004EC378 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = D46CA2191EE9ADC7004EC378 /* splash.png */; };
 		D4BB2B671B901EC40075F161 /* right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BB2B661B901EC40075F161 /* right_arrow@2x.png */; };
 		D4BB2B791B9066BD0075F161 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B711B9066BD0075F161 /* libPayPalMobile.a */; };
 		D4BB2B7B1B9067780075F161 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB2B7A1B9067780075F161 /* Accelerate.framework */; };
@@ -247,6 +247,7 @@
 		8DFF6BA6A8D6CCAE39C5B705 /* Pods-W4FirePizzaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W4FirePizzaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-W4FirePizzaTests/Pods-W4FirePizzaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2ECD8FC8423C8075281651B /* Pods-W4FirePizza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W4FirePizza.release.xcconfig"; path = "Pods/Target Support Files/Pods-W4FirePizza/Pods-W4FirePizza.release.xcconfig"; sourceTree = "<group>"; };
 		CC135701114CA3FBF32B1A5B /* libPods-W4FirePizzaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-W4FirePizzaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42EE2FE1F0785D800EE1051 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		D456360D1B8D8FC6003DCA53 /* DataSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSyncManager.h; sourceTree = "<group>"; };
 		D456360E1B8D8FC6003DCA53 /* DataSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSyncManager.m; sourceTree = "<group>"; };
 		D456360F1B8D8FC6003DCA53 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -292,7 +293,6 @@
 		D45636571B8DDDFD003DCA53 /* ic_add_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_add_48pt_2x.png; sourceTree = "<group>"; };
 		D456365D1B8DE6A2003DCA53 /* ic_keyboard_arrow_down_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_keyboard_arrow_down_48pt_2x.png; sourceTree = "<group>"; };
 		D45636631B8DE6AF003DCA53 /* ic_keyboard_arrow_up_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_keyboard_arrow_up_48pt_2x.png; sourceTree = "<group>"; };
-		D46CA2191EE9ADC7004EC378 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		D4BB2B661B901EC40075F161 /* right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow@2x.png"; sourceTree = "<group>"; };
 		D4BB2B691B9066BD0075F161 /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
 		D4BB2B6A1B9066BD0075F161 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
@@ -449,7 +449,7 @@
 		182EC3FB1B83BA7D00A061A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D46CA2191EE9ADC7004EC378 /* splash.png */,
+				D42EE2FE1F0785D800EE1051 /* splash.png */,
 				18C250E11CA5641500E81C70 /* minus.png */,
 				18C250E21CA5641500E81C70 /* plus.png */,
 				18F4C4F91C8EF60F00886692 /* ic_minus.png */,
@@ -871,7 +871,7 @@
 				182EC4051B83E8BF00A061A3 /* refresh.png in Resources */,
 				186B1EE81B939D8600783218 /* unchecked_checkbox.png in Resources */,
 				184D3DB01B84BBDA00545081 /* ic_contactus@2x.png in Resources */,
-				D46CA21A1EE9ADC7004EC378 /* splash.png in Resources */,
+				D42EE2FF1F0785D800EE1051 /* splash.png in Resources */,
 				182EC4011B83E77400A061A3 /* order.png in Resources */,
 				186939C81B845455007AF80B /* ListingCustomTableViewCell.xib in Resources */,
 				184D3D861B84935500545081 /* icon@2x.png in Resources */,
@@ -1171,7 +1171,7 @@
 			baseConfigurationReference = 258AF76E0667CEC8163AEC75 /* Pods-W4FirePizza.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Ibrar Hussain (26JX845KJ2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ibrar Hussain (26JX845KJ2)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1205,7 +1205,7 @@
 			baseConfigurationReference = C2ECD8FC8423C8075281651B /* Pods-W4FirePizza.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Ibrar Hussain (26JX845KJ2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ibrar Hussain (26JX845KJ2)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
