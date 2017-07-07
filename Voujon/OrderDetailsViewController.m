@@ -90,12 +90,41 @@
     
     _choosePaymentLbl.text = [NSString stringWithFormat:@"Choose Payment Method (Extra £%0.2f will be charged for online payment)",[[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"ElectronicPaymentCharge"] floatValue]];
     
+    [self setupPaymentMenthodUI];
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) setupPaymentMenthodUI {
+    
+    NSString* paymentMethods = [[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"PaymentMethods"];
+    
+    self.paypalLbl.hidden = YES;
+    self.paypalCheckbox.hidden = YES;
+    self.cashLbl.hidden = YES;
+    self.cashCheckbox.hidden = YES;
+    self.stripeLbl.hidden = YES;
+    self.stripeCheckbox.hidden = YES;
+    
+    
+        if ([[paymentMethods lowercaseString] containsString:@"cash"]) {
+            self.cashLbl.hidden = NO;
+            self.cashCheckbox.hidden = NO;
+        }
+        if ([[paymentMethods lowercaseString] containsString:@"card"]) {
+            self.stripeLbl.hidden = NO;
+            self.stripeCheckbox.hidden = NO;
+        }
+        if ([[paymentMethods lowercaseString] containsString:@"paypal"]) {
+            self.paypalLbl.hidden = NO;
+            self.paypalCheckbox.hidden = NO;
+        }
+    
+    
 }
 
 -(void)viewDidLayoutSubviews {
