@@ -1192,7 +1192,8 @@
     
     if (textField.tag == 101) {
         
-        [self calculateDistance:textField.text];
+//        [self calculateDistance:textField.text];
+        [self validateDeliveryChargesForPostCode:textField.text];
         
     }
     
@@ -1231,6 +1232,71 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self scrollTouch];
+}
+
+- (void) validateDeliveryChargesForPostCode:(NSString *)postalCode {
+    
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"DeliveryPolicy"]];
+    
+    if ([[dict allKeys] containsObject:@"_xsi:type"]) {
+        
+        CGFloat finalAmount = [[[[orderTotal componentsSeparatedByString:@" "] lastObject] stringByReplacingOccurrencesOfString:@"£" withString:@""] floatValue];
+        NSString* finalPostCode = [postalCode substringToIndex:postalCode.length-3];
+        
+        NSMutableArray* postcodeArr = [[NSMutableArray alloc] initWithArray:[[dict valueForKey:@"Areas"] valueForKey:@"DeliveryArea"]];
+        
+        int flag = 0;
+        int i = 0;
+        for (NSDictionary* postcodeDict in postcodeArr) {
+            
+            if ([[[postcodeDict valueForKey:@"Postcode"] lowercaseString] isEqualToString:[finalPostCode lowercaseString]]) {
+                
+                flag = 1;
+                break;
+                
+            }
+            i++;
+            
+        }
+        
+        if (flag == 1) {
+            
+            NSDictionary* postcodeDict = [postcodeArr objectAtIndex:i];
+            
+            if (finalAmount < [[postcodeDict valueForKey:@"MinimumDeliveryThreshold"] floatValue]) {
+                isDeliveryPostalCodeInvalid = 0;
+                [self.invalidPostcodeLbl setHidden:false];
+                [self.invalidPostcodeLbl setFont:[UIFont boldSystemFontOfSize:9.0]];
+                [self.invalidPostcodeLbl setText:[NSString stringWithFormat:@"Sorry ! You need to add product worth £%@ to yor cart for delivery option.",[postcodeDict valueForKey:@"MinimumDeliveryThreshold"]]];
+            }
+            else if (finalAmount >= [[postcodeDict valueForKey:@"MinimumDeliveryThreshold"] floatValue] && finalAmount < [[postcodeDict valueForKey:@"FreeDeliveryThreshold"] floatValue]) {
+                isDeliveryPostalCodeInvalid = 2;
+                [self.invalidPostcodeLbl setHidden:true];
+                [[SharedContent sharedInstance] setExtraDistanceDeliveryCharge:[[postcodeDict valueForKey:@"DeliveryCharge"] floatValue]];
+                [[SharedContent sharedInstance] setExtraDistanceInMiles:0.0];
+            }
+            else {//if (finalAmount >= [[postcodeDict valueForKey:@"FreeDeliveryThreshold"] floatValue]) {
+                isDeliveryPostalCodeInvalid = 2;
+                [self.invalidPostcodeLbl setHidden:true];
+                [[SharedContent sharedInstance] setExtraDistanceDeliveryCharge:0.0];
+                [[SharedContent sharedInstance] setExtraDistanceInMiles:0.0];
+            }
+            
+        }
+        else {
+            isDeliveryPostalCodeInvalid = 0;
+            [self.invalidPostcodeLbl setHidden:false];
+            [self.invalidPostcodeLbl setFont:[UIFont boldSystemFontOfSize:9.0]];
+            [self.invalidPostcodeLbl setText:@"Sorry ! Your post code is out of range !"];
+        }
+        
+        
+    }
+    else {
+        [self calculateDistance:postalCode];
+    }
+    
 }
 
 - (void) calculateDistance:(NSString *)toPostalCode {
