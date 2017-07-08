@@ -1242,7 +1242,8 @@
     if ([[dict allKeys] containsObject:@"_xsi:type"]) {
         
         CGFloat finalAmount = [[[[orderTotal componentsSeparatedByString:@" "] lastObject] stringByReplacingOccurrencesOfString:@"£" withString:@""] floatValue];
-        NSString* finalPostCode = [postalCode substringToIndex:postalCode.length-3];
+        
+        NSString* finalPostCode = [[postalCode stringByReplacingOccurrencesOfString:@" " withString:@""] substringToIndex:postalCode.length-3];
         
         NSMutableArray* postcodeArr = [[NSMutableArray alloc] initWithArray:[[dict valueForKey:@"Areas"] valueForKey:@"DeliveryArea"]];
         
