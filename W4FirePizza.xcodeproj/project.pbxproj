@@ -1192,9 +1192,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.aromaKitchen;
 				PRODUCT_NAME = "Aroma Kitchen";
-				PROVISIONING_PROFILE = "f1ddff83-c667-43ce-ab90-20ca6ba31902";
+				PROVISIONING_PROFILE = "4361ffd8-afc1-4836-a368-cfa3791f2c85";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1226,9 +1226,9 @@
 					"-ObjC",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.w4firepizza;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhit.aromaKitchen;
 				PRODUCT_NAME = "Aroma Kitchen";
-				PROVISIONING_PROFILE = "f1ddff83-c667-43ce-ab90-20ca6ba31902";
+				PROVISIONING_PROFILE = "4361ffd8-afc1-4836-a368-cfa3791f2c85";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
