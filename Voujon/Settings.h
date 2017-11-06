@@ -25,11 +25,11 @@
 #define kGetComponentItemsNew @"GetComponentItemsNew"
 #define kGetOptionsNew @"GetOptionsNew"
 
-#define kStripeCharge @"chargecard"
+#define kStripeCharge @"chargecard"s
 
 //#define kBusinessID @"7868"//Romeo
 //#define kBusinessID @"7863"//Demo
-#define kBusinessID @"78610"
+#define kBusinessID @"78657"
 //#define kBusinessID @"78613"
 
 #endif
