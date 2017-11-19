@@ -3152,6 +3152,7 @@ int toppingTag = -1;
                         strengthPicker.delegate = self;
                         strengthPicker.dataSource = self;
                         strengthPicker.showsSelectionIndicator = YES;
+                        strengthPicker.translatesAutoresizingMaskIntoConstraints = false;
                         
                         UIToolbar *toolBar= [[UIToolbar alloc] initWithFrame:CGRectMake(0,0,320,44)];
                         [toolBar setBarStyle:UIBarStyleBlackOpaque];
@@ -3190,6 +3191,7 @@ int toppingTag = -1;
                             picker.delegate = self;
                             picker.dataSource = self;
                             picker.showsSelectionIndicator = YES;
+                            picker.translatesAutoresizingMaskIntoConstraints = false;
                             
                             [cell.variantLbl setHidden:true];
                             
@@ -3258,6 +3260,7 @@ int toppingTag = -1;
                     picker.delegate = self;
                     picker.dataSource = self;
                     picker.showsSelectionIndicator = YES;
+                    picker.translatesAutoresizingMaskIntoConstraints = false;
                 
                     UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,0,320,44)];
                     [toolBar setBarStyle:UIBarStyleBlackOpaque];
