@@ -3078,7 +3078,7 @@ int toppingTag = -1;
             cell.ItemTitle.text = [dict valueForKey:@"Name"];
             cell.ItemTitle.adjustsFontSizeToFitWidth = TRUE;
             
-            cell.ItemDescription.text = [[menuDisplayArr objectAtIndex:indexPath.section] valueForKey:@"CategoryName"];
+            cell.ItemDescription.text = @"";//[[menuDisplayArr objectAtIndex:indexPath.section] valueForKey:@"CategoryName"];
             cell.ItemPrice.text = [NSString stringWithFormat:@"£%@",[[[dict valueForKey:@"ProductVariants"] objectAtIndex:0] valueForKey:@"Price"]];
             
             if([cell.ItemTitle.text isEqualToString:cell.ItemDescription.text])
@@ -3098,7 +3098,7 @@ int toppingTag = -1;
                 [cell.addArrowButton setImage:[UIImage imageNamed:@"ic_keyboard_arrow_up_48pt.png"] forState:UIControlStateNormal];
                 [cell.addArrowButton removeTarget:self action:@selector(addButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
                 [cell.addArrowButton addTarget:self action:@selector(downButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-                [cell.variantLbl setHidden:false];
+                [cell.variantLbl setHidden:true];
                 [cell.variantTxtField setHidden:false];
                 [cell.optionAddButton setHidden:false];
                 [cell.optionsPriceLbl setHidden:false];
@@ -3121,6 +3121,7 @@ int toppingTag = -1;
                             if([[[selectedStrengthPickerContent valueForKey:@"OptionId"] stringValue] isEqualToString:@"1"])
                             {
                                 cell.variantTxtField.text = [[prodOptionsArr objectAtIndex:0] valueForKey:@"Name"];
+                                [cell.variantLbl setHidden:false];
                                 [cell.variantLbl setText:@"Sauces"];
                                 for(int i = 0 ; i < [prodOptionsItemArr count]; i++)
                                 {
@@ -3132,6 +3133,7 @@ int toppingTag = -1;
                             }
                             else
                             {
+                                [cell.variantLbl setHidden:false];
                                 [cell.variantLbl setText:@"Strength"];
                                 cell.variantTxtField.text = [[prodOptionsArr objectAtIndex:1] valueForKey:@"Name"];
                                 for(int i = 0 ; i < [prodOptionsItemArr count]; i++)
@@ -3188,6 +3190,8 @@ int toppingTag = -1;
                             picker.delegate = self;
                             picker.dataSource = self;
                             picker.showsSelectionIndicator = YES;
+                            
+                            [cell.variantLbl setHidden:true];
                             
                             UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,0,320,44)];
                             [toolBar setBarStyle:UIBarStyleBlackOpaque];
@@ -3354,7 +3358,7 @@ int toppingTag = -1;
                 [cell.addArrowButton removeTarget:self action:@selector(addButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
                 [cell.addArrowButton addTarget:self action:@selector(downButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
                 
-                [cell.variantLbl setHidden:false];
+                [cell.variantLbl setHidden:true];
                 [cell.variantTxtField setHidden:false];
                 [cell.optionAddButton setHidden:false];
                 [cell.optionsPriceLbl setHidden:false];
