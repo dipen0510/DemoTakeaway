@@ -15,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTxtField;
+@property (weak, nonatomic) IBOutlet UIButton *saveDetailsButton;
+- (IBAction)saveDetailsButtonTapped:(id)sender;
 
 @end

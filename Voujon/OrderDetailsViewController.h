@@ -85,5 +85,8 @@
 
 - (IBAction)stripeCheckboxTapped:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *saveDetailsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *saveDetailsButton;
+- (IBAction)saveDetailsButtonTapped:(id)sender;
 
 @end

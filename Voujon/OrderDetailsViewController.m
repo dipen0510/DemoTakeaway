@@ -91,6 +91,8 @@
     _choosePaymentLbl.text = [NSString stringWithFormat:@"Choose Payment Method (Extra £%0.2f will be charged for online payment)",[[[[SharedContent sharedInstance] appSettingsDict] valueForKey:@"ElectronicPaymentCharge"] floatValue]];
     
     [self setupPaymentMenthodUI];
+    _saveDetailsButton.hidden = YES;
+    _saveDetailsLabel.hidden = YES;
     
 }
 
@@ -154,6 +156,8 @@
 - (IBAction)deliveryCheckboxTapped:(id)sender {
     
     orderType = 1;
+    _saveDetailsButton.hidden = NO;
+    _saveDetailsLabel.hidden = NO;
     if ([self validateMinimumOrderAmount_new])
     {
           if([self validateFreeDeliveryThreshold])
@@ -210,6 +214,8 @@
 - (IBAction)collectionCheckboxTapped:(id)sender {
     
     orderType = 2;
+    _saveDetailsButton.hidden = YES;
+    _saveDetailsLabel.hidden = YES;
     [self.collectionCheckbox setImage:[UIImage imageNamed:@"Checked-checkbox.png"] forState:UIControlStateNormal];
     [self.deliveryCheckbox setImage:[UIImage imageNamed:@"unchecked_checkbox.png"] forState:UIControlStateNormal];
     
@@ -965,6 +971,8 @@
     
     if ([self isFormValid]) {
         
+        [[NSUserDefaults standardUserDefaults] setObject:[self prepareDictionarForOfflineSaveOrderDetails] forKey:@"SavedAddressDetails"];
+        
         [[SharedContent sharedInstance] setOrderDetailsDict:[self prepareDictionarForOrderDetails]];
         [self performSegueWithIdentifier:@"showPersonalDetailsSegue" sender:nil];
         
@@ -1091,6 +1099,28 @@
     
     return dict;
     
+}
+
+- (NSMutableDictionary *) prepareDictionarForOfflineSaveOrderDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:self.address1TxtField.text forKey:@"address1"];
+    [dict setObject:self.address2TxtField.text forKey:@"address2"];
+    [dict setObject:self.townTxtField.text forKey:@"townCity"];
+    
+    return dict;
+    
+}
+
+- (IBAction)saveDetailsButtonTapped:(id)sender {
+    _saveDetailsButton.selected = !_saveDetailsButton.isSelected;
+    NSMutableDictionary* saveDetailsDict = [[NSMutableDictionary alloc] initWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:@"SavedAddressDetails"]];
+    if (saveDetailsDict.count>0 && _saveDetailsButton.isSelected) {
+        _address1TxtField.text = [saveDetailsDict valueForKey:@"address1"];
+        _address2TxtField.text = [saveDetailsDict valueForKey:@"address2"];
+        _townTxtField.text = [saveDetailsDict valueForKey:@"townCity"];
+    }
 }
 
 

@@ -64,6 +64,8 @@
     
     if ([self isFormValid]) {
         
+        [[NSUserDefaults standardUserDefaults] setObject:[self prepareDictionarForOrderDetails] forKey:@"SavedUserDetails"];
+        
         [[SharedContent sharedInstance] setOrderDetailsDict:[self prepareDictionarForOrderDetails]];
         [self performSegueWithIdentifier:@"showConfirmOrderSegue" sender:nil];
         
@@ -158,4 +160,14 @@
     [self.view endEditing:YES];
 }
 
+- (IBAction)saveDetailsButtonTapped:(id)sender {
+    _saveDetailsButton.selected = !_saveDetailsButton.isSelected;
+    NSMutableDictionary* saveDetailsDict = [[NSMutableDictionary alloc] initWithDictionary:[[NSUserDefaults standardUserDefaults] objectForKey:@"SavedUserDetails"]];
+    if (saveDetailsDict.count>0 && _saveDetailsButton.isSelected) {
+        _firstNameTxtField.text = [saveDetailsDict valueForKey:@"firstName"];
+        _lastNameTxtField.text = [saveDetailsDict valueForKey:@"lastName"];
+        _emailTxtField.text = [saveDetailsDict valueForKey:@"email"];
+        _phoneTxtField.text = [saveDetailsDict valueForKey:@"phone"];
+    }
+}
 @end

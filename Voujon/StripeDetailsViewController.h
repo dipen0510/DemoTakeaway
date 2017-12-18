@@ -17,5 +17,6 @@
 @property(nonatomic) STPPaymentCardTextField *paymentTextField;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 - (IBAction)backButtonTapped:(id)sender;
-
+@property (weak, nonatomic) IBOutlet UIButton *saveDetailsButton;
+- (IBAction)saveDetailsButtonTapped:(id)sender;
 @end
